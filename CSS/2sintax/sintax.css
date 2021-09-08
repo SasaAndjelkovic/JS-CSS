@@ -1,0 +1,7 @@
+
+p {
+/* p is a selector in CSS (it points to the HTML element you want to style: <p>). */
+  color: red;
+  /* color is a property, and red is the property value */
+  text-align: center;
+} 
