@@ -1,0 +1,25 @@
+#para1 {
+    text-align: center;
+    color: red;
+}
+
+.center {
+    text-align: center;
+    color: rgba(0, 0, 255, 0.5)
+}
+
+p.center {
+    font-weight: bold;
+}
+
+.large {
+    font-size: 300%;
+}
+
+* {
+    background-color: #ee82ee;
+}
+
+h1, p {
+    font-style: italic;
+}
