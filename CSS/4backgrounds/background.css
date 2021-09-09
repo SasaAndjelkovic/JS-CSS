@@ -1,0 +1,22 @@
+h1 {
+    background-color: green;
+}
+
+div {
+    background-color: lightblue;
+}
+
+.colored {
+    background-color: yellow;
+}
+
+body {
+    /* background-color for shorthand*/
+    background-image: url('background.jpg');
+    background-repeat: no-repeat;
+    /*x - horizontally; y - vertically;*/
+    background-attachment: fixed;
+    /* scroll */
+    background-position: right top;
+}
+
