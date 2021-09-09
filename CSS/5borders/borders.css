@@ -1,0 +1,52 @@
+.dotted {
+    border-style: dotted;
+    border-width: 5px;
+    border-color: red;
+}
+
+.dashed {
+    border-style: dashed;
+    border-width: medium;
+    border-color: royalblue;
+}
+
+.solid {
+    border-style: solid;
+    border-top: dotted;
+    border-width: thick;
+}
+
+.three {
+    border-style: double solid dotted;
+}
+
+.groove {
+    border-style: groove;
+    border-width: 20px 5px;
+}
+
+.ridge {
+    border-style: ridge;
+}
+
+.inset {
+    border: 5px inset red;
+}
+
+.outset {
+    border-style: outset;
+}
+
+.none {
+    border-style: none;
+    border-left: 6px solid red;
+}
+
+.hidden {
+    border-style: hidden;
+}
+
+.mix {
+    border-style: dotted dashed solid double;
+    border-radius: 5px;
+}
