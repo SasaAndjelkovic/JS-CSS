@@ -1,0 +1,19 @@
+p {
+    margin: 25px 50px 75px;
+    border: 1px solid black;
+}
+
+h2 {
+    width: 300px;
+    margin: auto;
+    border: 1px solid black;
+}
+
+div {
+    border: 1px solid black;
+    margin-left: 100px;
+}
+
+.ex1 {
+    margin-left: inherit;
+}
