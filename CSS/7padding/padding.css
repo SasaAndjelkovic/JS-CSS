@@ -1,0 +1,11 @@
+
+.Ex1 {
+    width: 300px;
+    background-color: yellow;
+}
+
+.Ex2 {
+    width: 300px;
+    border: 1px solid black;
+    padding: 50px;
+}
