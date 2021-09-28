@@ -14,3 +14,5 @@ console.log('agnes' || 'user')
 //Ukoliko pocetna vrednost moze biti konvertovana u false, umesto nje cete dobiti zamensku vrednost. 
 //0, NaN, i prazan znakovni niz '' racunaju se kao false. Sve ostale vrednosti se racunaju kao true.
 console.log(null && 'user')
+// -> null
+//Operator && radi slicno, ali obrnuto.
