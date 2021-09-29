@@ -158,3 +158,15 @@ var x = 10;
 var y = 5;
 console.log (x + 'y = ' + x+y);
 // -> '10y = 105'
+
+
+//25. 
+var x = 1, y = 3, z = 8;
+x = y = y = 8;
+console.log (x, y, z);
+// -> 8 8 8
+
+
+//26. 
+console.log (typeof typeof 1);
+// -> string
