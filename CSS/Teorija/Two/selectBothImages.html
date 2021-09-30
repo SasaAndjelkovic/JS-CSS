@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        #about img {
+            border: 3px solid blue; /*both */
+        }
+
+        #about > #image1, #about > #image2 {
+            border: 3px solid red; /*second */
+        }
+
+        #about #image1, #about #image2 {
+            border: 3px solid green; /* both */
+        }
+
+        #about #image1, #image2 {
+            border: 3px solid yellow; /* both */
+        }
+    </style>
+<body>
+    <div id="about">
+        <p>This is first paragraph
+            <img id="image1" src="One.jpg"/></p>
+        <img id="image2" src="two.jpg" />
+    </div>
+</body>
+</html>

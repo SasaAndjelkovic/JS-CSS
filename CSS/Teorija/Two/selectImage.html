@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        #about, img {
+            border: 3px solid darkmagenta;
+            /* ceo div */
+        }
+
+        #about img {
+            border: 3px solid chartreuse;
+            /* one.jpg */
+        }
+
+        #about > img {
+            border: 5px solid saddlebrown;
+            /* this one */
+        }
+
+        img #about {
+            border: 3px solid orangered;
+        }
+    </style>
+<body>
+    <div id="about">
+        <p>This is first paragraph
+            <img src="One.jpg"/></p>
+        <img src="two.jpg"/>
+    </div>
+</body>
+</html>
