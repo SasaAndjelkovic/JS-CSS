@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    p.important {
+        color: blue; /* first */
+    }
+    .important {
+        background-color: red; /* both */
+    } 
+    p.important {
+        background-color: green; /* first */
+    }
+</style>
+<body>
+    <p class="important">Pay attention!</p>
+    <p>
+        <span>Selectors</span>are very important and
+        <span class="important">not too hard to learn</span>.
+    </p>
+</body>
+</html>
