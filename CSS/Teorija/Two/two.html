@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    p{
+        background-color: royalblue;
+        color:cornsilk;
+        font-weight: bold;
+    }
+    .t{
+        background-color: crimson;
+        color: yellow;
+    }
+    .m{
+        background-color: salmon;
+        color: yellow;
+    }
+</style>
+<body>
+    <p>1. Which of the following selectors selects only the image element with source two.jpg
+        (1selectImage.html):</p>
+        <ul>
+            <li>#about, img</li>
+            <li>#about img</li>
+            <li class="t">#about > img</li>
+            <li>img #about</li>
+        </ul>
+    <p>2. Suppose we have the following html and css code. Which color would be the next in given paragraph?
+        (2whichColor.html)
+    </p>
+        <ul>
+            <li class="t">green</li>
+        </ul>
+    <p>3. Which of the following selectors select both image elements:
+        (3selectBothImages.html)
+    </p>
+        <ul>
+            <li class="t">#about #image1, #image2</li>
+            <li>#about #image1, #about #image2</li>
+            <li class="t">#about img</li>
+            <li class="t">#about > #image1, #about > #image2</li>
+        </ul>
+    <p>4. Selector a selects:</p>
+        <ul>
+            <li>Only first a element on the page</li>
+            <li class="m">All a elements on the page</li>
+            <li>Only a elements that are not targeted by some other selector</li>
+        </ul>
+    <p>5. What is the difference between inline and inline-block elements?</p>
+        <ul>
+            <li>Inline-block elements always start in new line</li>
+            <li class="m">Width and height can be set to inline-block elements and not to inline elements</li>
+            <li>Width and height can be set to inline elements and not to inline-block elements</li>
+        </ul>
+    <p>6. If we use border-width property with four values, then values are given in following order:</p>
+        <ul>
+            <li>Up, down, left, right</li>
+            <li>Up, down, right, left</li>
+            <li class="t">Up , right, down, left</li>
+            <li>Up, left, down, right</li>
+        </ul>
+    <p>7. What does selector div:first-child targets</p>
+        <ul>
+            <li>First child of first div</li>
+            <li>First child of each div</li>
+            <li class="t">div that is the first child of its parent</li>
+            <li class="m">First div on the page</li>
+        </ul>
+    <p>8. What is rule margin: Opx auto used for?</p>
+        <ul>
+            <li>Centering element vercticaly on the page</li>
+            <li class="t">Centering element horizontally inside its parent element</li>
+            <li>Centering element vercticaly inside its parent element</li>
+            <li class="m">Centering element horizontally on the page</li>
+        </ul>
+    <p>9. For what typeface holds that all letters are equally width?</p>
+        <ul>
+            <li class="t">Monospace</li>
+            <li>Serif</li>
+            <li>Sans-serif</li>
+        </ul>
+    <p>10. Which comments are corect on css?</p>
+        <ul>
+            <li><!--comment--></li>
+            <li class="t">/* comment */</li>
+            <li>// comment</li>
+            <li>All three ways are correct</li>
+        </ul>
+    <p>11. Unit em refers to:</p>
+        <ul>
+            <li>One percent of the viewport width</li>
+            <li>16px</li>
+            <li>One percent of the image of the element</li>
+            <li class="t">Font size of that element</li>
+        </ul>
+    <p>12. What color refers to code #00FF00?</p>
+        <ul>
+            <li class="t">green</li>
+        </ul>
+    <p>13. Which of following properties is used to underline, overline, and strikethrough text?</p>
+        <ul>
+            <li class="t">text-decoration</li>
+            <li>text-indent</li>
+            <li>text-tranform</li>
+            <li>text-align</li>
+        </ul>
+    <p>14. Which of the following selectors select only the link to politika newspaper:
+        (14selectLink.html) </p>
+        <ul>
+            <li>.daily</li>
+            <li>a.politika</li>
+            <li class="t">#news1</li>
+            <li>a</li>
+        </ul>
+    <p>15. Keyword inherit is used for:</p>
+        <ul>
+            <li>Forcing parent property to use child's value</li>
+            <li class="t">Forcing child property to use parent's value</li>
+            <li>Setting the default value for the property</li>
+            <li>Setting the highest priority to that role</li>
+        </ul>
+    <p>16. If we have the following html and css code, what would be size of margin between them?
+        (16marginSize.html)
+    </p>
+        <ul>
+            <li class="m">30</li> <!-- The vertical margin between the two paragraphs above should be 40px (30px + 10px). 
+            But due to margin collapse, the actual margin ends up being 30px! -->
+        </ul>
+    <p>17. Which element is used for including external CSS on page?</p>
+        <ul>
+            <li>style</li>
+            <li>a</li>
+            <li>script</li>
+            <li class="t">link</li>
+        </ul>
+    <p>18. How can we succeed to have transparent element and that all nested elements are transparent too?</p>
+        <ul>
+            <li class="t">Using opasity</li>
+            <li>Using display: none</li>
+            <li class="m">Using rgba format and alpha channel</li>
+        </ul>
+    <p>19. Which of the following selectors selects only the first paragraph:
+        (19selectFirstParagraph.html)
+    </p>
+        <ul>
+            <li class="t">p.important</li>
+            <li>.important</li>
+            <li>p. important</li>
+        </ul>
+    <p>20. Suppose we have the following html and css code. What would be the size in pixels of the next in paragraph?
+        (20sizeText.html)
+    </p>
+        <ul>
+            <li class="m">30px</li>
+        </ul>
+    <p>21. If the content of the element is 50px wide, padding is 5px wide and border is 2px wide
+        and property box-sizing is set to content-box, then the width od this element is:
+    </p>
+        <ul>
+            <li class="t">64px</li> 
+            <!-- content-box (default):This div has a width of 50px. 
+            But the full width is 50px + 2*2px (left and right border) + 
+            2*5px (left and right padding) = 64px! -->
+        </ul>
+    <p>22. To reference a style sheet across multiple HMTL pages, how would you define your CSS?</p>
+        <ul>
+            <li class="t">External Style Sheet</li>
+            <li>CSS is meant for only one page</li>
+            <li>Internal Style Sheet</li>
+        </ul>
+    <p>23. What property is used to change the color of an element?</p>
+        <ul>
+            <li>font-color</li>
+            <li>text-color</li>
+            <li>fontcolor</li>
+            <li class="t">color</li>
+        </ul>
+    <p>24. Which property is used on tables to set that there should be no spacing between cells?</p>
+        <ul>
+            <li>cell-spacing</li>
+            <li class="t">border-collapse</li>
+            <li>cell-collapse</li>
+            <li>border-spasing</li>
+        </ul>
+    <p>25. For color format rgb(x,y,z) what is the range for x, y, and z value?</p>
+        <ul>
+            <li>0 - 15</li>
+            <li class="t">0 - 255</li>
+            <li>0 - 8</li>
+            <li>0 - 256</li>
+        </ul>    
+</body>
+</html>
