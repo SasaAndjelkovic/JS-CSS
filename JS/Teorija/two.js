@@ -325,7 +325,7 @@ function f(n) {
 console.log(f(5));
 // -> NaN (ne znam zbog cega)
 // Kada nema a30 u funkciji onda je cisto 25, kada je a30 ispred result onda je 35.
-
+// verovatno je unutrasnji skop
 
 //27. 
 var result; 

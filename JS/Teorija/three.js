@@ -62,22 +62,6 @@ console.log(a === b);
 // -> false
 
 
-//7. 
-var coffee = 'cappuccino';
-
-var superCoffee = {
-    coffee: 'espresso', 
-    strength: 3, 
-    orderCoffee: function () {
-        console.log(coffee);
-    }
-};
-
-superCoffee.orderCoffee();
-// -> cappuccino
-// kada bi u 72. liniji pisalo this.coffee tada je -> espresso
-
-
 //8. 
 function orderCoffee() {
     console.log(this.coffee);
@@ -163,36 +147,6 @@ console.log(a === b);
 // -> true
 
 
-//17. 
-var coffee = 'cappuccino';
-
-var superCoffee = {
-    coffee: 'espresso', 
-    strength: 3,
-    orderCoffee: function() {
-        console.log(this.coffee);
-    }
-};
-
-superCoffee.orderCoffee();
-// -> espresso
-
-
-//18. 
-var coffee = 'cappuccino';
-
-var superCoffee = {
-    coffee: 'espresso', 
-    strength: 3, 
-    orderCoffee: (function () {
-        return coffee;
-    }) ()
-};
-
-console.log(superCoffee.orderCoffee());
-// -> TypeError: superCoffee.orderCoffee is not a function
-
-
 //19. 
 var a = { x: 4, y: 11};
 var b = { x: 4, y: 11};
@@ -203,21 +157,6 @@ Object.prototype.formatting = function () {
 
 console.log(a.formatting() == b.formatting());
 // -> true
-
-
-//20. 
-var coffee = 'cappuccino';
-
-var superCoffee = {
-    coffee: 'espresso', 
-    strength: 3, 
-    orderCoffee: (function () {
-        return coffee;
-    })()
-};
-
-console.log(orderCoffee);
-// -> ReferenceError: orderCoffee is not defined
 
 
 //21. 
@@ -291,3 +230,64 @@ var obj = { x: 5, y: 13};
 obj.z = 20;
 console.log(obj);
 // -> {X: 5, y: 13, z: 20}
+
+
+//7. 
+var coffee = 'cappuccino';
+
+var superCoffee = {
+    coffee: 'espresso', 
+    strength: 3, 
+    orderCoffee: function () {
+        console.log(coffee);
+    }
+};
+
+superCoffee.orderCoffee();
+// -> cappuccino
+// kada bi u 72. liniji pisalo this.coffee tada je -> espresso
+
+
+//17. 
+var coffee = 'cappuccino';
+
+var superCoffee = {
+    coffee: 'espresso', 
+    strength: 3,
+    orderCoffee: function() {
+        console.log(this.coffee);
+    }
+};
+
+superCoffee.orderCoffee();
+// -> espresso
+
+
+//18. 
+var coffee = 'cappuccino';
+
+var superCoffee = {
+    coffee: 'espresso', 
+    strength: 3, 
+    orderCoffee: (function () {
+        return coffee;
+    }) ()
+};
+
+console.log(superCoffee.orderCoffee());
+// -> TypeError: superCoffee.orderCoffee is not a function
+
+
+//20. 
+var coffee = 'cappuccino';
+
+var superCoffee = {
+    coffee: 'espresso', 
+    strength: 3, 
+    orderCoffee: (function () {
+        return coffee;
+    })()
+};
+
+console.log(orderCoffee);
+// -> ReferenceError: orderCoffee is not defined

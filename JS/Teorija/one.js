@@ -7,7 +7,7 @@ console.log(x[13]);
 
 //2. 
 var a = 4, b = 3;
-if (a == b) {
+if (a = b) {
     console.log('The numbers are equal!');
 } else {
     console.log('Nope, they arent!');
