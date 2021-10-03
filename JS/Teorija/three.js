@@ -29,7 +29,9 @@ mondayToDo.sing.call(tuesdayToDo);
 
 
 //3. 
-var array = ['a', 'b', 'c'];
+var array = ['a', 'b', 'c', 'd'];
+[, , element] = array;
+console.log(element);
 
 function transform(array) {
     for (var i = 0; i < array.length; i++) {
@@ -245,7 +247,7 @@ var superCoffee = {
 
 superCoffee.orderCoffee();
 // -> cappuccino
-// kada bi u 72. liniji pisalo this.coffee tada je -> espresso
+// kada bi u 242. liniji pisalo this.coffee tada je -> espresso
 
 
 //17. 
@@ -291,3 +293,4 @@ var superCoffee = {
 
 console.log(orderCoffee);
 // -> ReferenceError: orderCoffee is not defined
+
