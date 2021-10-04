@@ -4,4 +4,6 @@ div {
     border: 15px solid green;
     padding: 50px;
     margin: 30px;
+    outline-offset: 15px;
+    outline: 5px solid blue;
 }
