@@ -1,0 +1,17 @@
+.а {
+    list-style-type: square;
+}
+
+.b {
+    list-style-type: circle;
+}
+
+.c {
+    list-style-type: lower-roman;
+    list-style-position: inside;
+}
+
+.d {
+    list-style-type: upper-alpha;
+    list-style-position: outside;
+}
