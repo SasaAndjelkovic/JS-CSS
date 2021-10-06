@@ -1,0 +1,40 @@
+div {
+    border: 3px solid red;
+}
+
+.static {
+    position: static;
+}
+
+.wid {
+    width: 800px;
+}
+
+.maxwid {
+    max-width: 800px;
+}
+
+.relative {
+    position: relative;
+    left: 30px;
+    height: 400px;
+}
+
+.fixed {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+}
+
+.absolute {
+    position: absolute;
+    top: 180px;
+    left: 50px;
+}
+
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    background-color: seagreen;
+}
