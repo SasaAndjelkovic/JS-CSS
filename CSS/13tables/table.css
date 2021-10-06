@@ -1,0 +1,36 @@
+table, td, th {
+    border: 1px solid black;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom-color: red;
+}
+
+th {
+    height: 70px;
+    background-color: hotpink;
+    color: ivory;
+}
+
+td {
+    height: 30px;
+    text-align: center;
+    vertical-align: bottom;
+}
+
+tr:nth-child(even) {
+    background-color: grey;
+}
+
+tr:hover {
+    background-color: yellow;
+}
+
+
+
