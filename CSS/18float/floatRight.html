@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="floatRight.css">
+</head>
+<body>
+    <h2>Float Right</h2>
+
+    <p>In this example, the image will float to the right in the paragraph, and the text in the paragraph will wrap around the image.</p>
+
+    <div class="p1"><img src="one.jpg" alt="one" style="width:170px;height:170px;margin-left:15px;">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.</div>
+
+    <br><br>
+
+    <h2 style="clear:right">With Clearfix</h2>
+    <p>We can fix this by adding a clearfix class with overflow: auto; to the containing element:</p>
+
+    <div class="clearfix">
+    <img class="img2" src="one.jpg" alt="one" width="170" height="170">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...
+    </div>
+    <h2>Float Next To Each Other</h2>
+
+    <p>In this example, the three divs will float next to each other.</p>
+
+    <div class="div1">Div 1</div>
+    <div class="div2">Div 2</div>
+    <div class="div3">Div 3</div>
+
+    <br><br>
+
+    <h2>Without clear</h2>
+    <div class="div4">div4</div>
+    <div class="div5">div5 - Notice that div5 is after div4 in the HTML code. However, since div1 floats to the left, the text in div5 flows around div4.</div>
+    <br><br>
+
+    <h2>With clear</h2>
+    <div class="div6">div6</div>
+    <div class="div7">div7 - Here, clear: left; moves div7 down below the floating div3. The value "left" clears elements floated to the left. You can also clear "right" and "both".</div>
+
+</body>
+</html>

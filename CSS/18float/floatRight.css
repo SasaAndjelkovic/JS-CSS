@@ -1,0 +1,55 @@
+img {
+    float:right;
+}
+
+.p1 {
+    border: 3px solid red;
+}
+
+.img2 {
+    float: right;
+}
+
+
+.clearfix {
+    border: 3px solid green;
+    overflow: auto;
+}
+
+div {
+    padding: 15px;
+}
+
+.div1 {
+    float: left;
+    background-color: red;
+}
+
+.div2 {
+    float: left;
+    background-color: green;
+}
+
+.div3 {
+    float:left;
+    background-color: blue;
+}
+
+.div4 {
+    float:left;
+    border: 3px solid red;
+}
+
+.div5 {
+    border: 3px solid green;
+}
+
+.div6 {
+    float: left;
+    border: 3px solid red;
+}
+
+.div7 {
+    border: 3px solid green;
+    clear: left;
+}
