@@ -1,0 +1,23 @@
+div p {
+    display: none;    
+    padding: 30px;
+    background-color: red;
+}
+
+div:hover p {
+    display: block;
+}
+
+p:first-child {
+    font-weight: bold;
+}
+
+/*the selector matches all <i> elements in <p> elements that are the first child of another element*/
+p:first-child i {
+    color: green;
+}
+
+/*the selector matches the first <i> element in all <p> elements*/
+p i:first-child {
+    font-size: small;
+}
