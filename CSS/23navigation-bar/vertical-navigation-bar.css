@@ -1,0 +1,36 @@
+ul {
+    list-style-type: none; /*Removes the bullets*/
+    margin: 0; /*to remove browser default settings*/
+    padding: 0;
+    width: 100px;
+    height: 100%;
+    background-color: red;
+}
+
+li {
+    text-align: center;
+    border-bottom: 1px solid green;
+}
+
+li a {
+    display: block; /*Displaying the links as block elements makes the whole link area clickable (not just the text), and it allows us to specify the width
+    (and padding, margin, height, etc. if you want)*/
+    color: blanchedalmond;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+li a.active {
+    background-color: green;
+}
+
+li a:hover {
+/*li a:hover:not(.active) {*/
+    background-color: yellow;
+    color: red;
+}
+
+
+
+
+

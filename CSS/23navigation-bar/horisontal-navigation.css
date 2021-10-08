@@ -1,0 +1,31 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /*overflow:hidden is added to the ul element to prevent li elements from going outside of the list.*/
+    background-color: green;
+}
+
+li {
+    /*display: inline; *By default, <li> elements are block elements. 
+    Here, we remove the line breaks before and after each list item, to display them on one line*/
+    float: left; /*Use float to get block elements to float next to each other*/
+    border-right: 1px solid white;
+}
+
+li a {
+    display: block; /*Allows us to specify padding (and height, width, margins, etc. if you want)*/
+    padding: 8px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+
+li a.active {
+    background-color: yellow;
+    color: red;
+}
+
+li a:hover {
+    background-color: blue;
+}
