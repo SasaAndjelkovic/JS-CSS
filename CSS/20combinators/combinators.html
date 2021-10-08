@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="combinators.css">
+</head>
+<body>
+    <h2>Descendant (' '), Child ('>'), Adjacent Sibling ('+') and General Sibling ('~')Selector</h2>
+    
+    <div>
+        <p>Paragraph 1 in the div</p>
+        <p>Paragraph 2 in the div</p>
+        <section>
+            <!-- not Child but Descendant -->
+            <p>Paragraph 3 in the div (inside a section element)</p>
+        </section>
+        <p>Paragraph 3a in the div</p>
+    </div>
+
+    <p>Paragraph 4. Not in a div and first p element that are placed immediately after div element</p>
+    <code>Some code.</code>
+    <p>Paragraph 5. Not in a div</p>
+</body>
+</html>

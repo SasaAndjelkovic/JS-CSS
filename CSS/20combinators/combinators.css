@@ -1,0 +1,15 @@
+div p {
+    background-color: red;
+}
+
+div > p {
+    font-weight: bold;
+}
+
+div + p {
+    background-color: green;
+}
+
+div ~ p {
+    font-style: oblique;
+}
