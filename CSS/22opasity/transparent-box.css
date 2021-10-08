@@ -1,0 +1,21 @@
+.back {
+    /* background: url('../18float/one.jpg'); */
+    background-color: blue;
+    border: 1px solid red;
+}
+
+.box {
+    margin: 30px;
+    border: 1px solid red;
+    background-color: red;
+    opacity: .5;
+}
+
+.box:hover {
+    opacity: 1;
+}
+
+.box p {
+    margin: 5%;
+    font-weight: bolder;
+}

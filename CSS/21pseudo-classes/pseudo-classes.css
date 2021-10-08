@@ -21,3 +21,8 @@ p:first-child i {
 p i:first-child {
     font-size: small;
 }
+
+p::first-letter {
+    font-family: fantasy;
+    color: green;
+}
