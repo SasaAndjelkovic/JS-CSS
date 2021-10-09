@@ -1,0 +1,19 @@
+.dropdown {
+    position: relative; /*when we want the dropdown content to be placed right below the dropdown button (using position:absolute).*/
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: abspolute;
+    background-color: red;
+    min-width: 160px;
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+
