@@ -7,7 +7,7 @@
     display: none;
     position: abspolute;
     background-color: red;
-    min-width: 160px;
+    min-width: 160px; /*If you want the width of the dropdown content to be as wide as the dropdown button, set the width to 100%*/
     padding: 12px 16px;
     z-index: 1;
 }
