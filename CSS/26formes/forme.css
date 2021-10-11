@@ -9,6 +9,10 @@ input, select{ /*[type=text]*/
     box-sizing: border-box;
 }
 
+input[type=text]:focus {
+    background-color: lightblue;
+  }
+
 input[type=submit] {
     /* width: 100%; */
     background-color: rgb(4, 119, 4);
