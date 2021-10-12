@@ -1,0 +1,33 @@
+#example {
+    background-image: url(../Galerija/green-ivy.jpg), url(../Galerija/white-texture.jpg);
+    background-position: left bottom, left top;
+    background-repeat: no-repeat, repeat;
+    /*background: url(img_flwr.gif) right bottom no-repeat, url(paper.gif) left top repeat;*/
+    padding: 15px;
+}
+
+.div1 {
+    border: 1px solid black;
+    height: 120px;
+    width: 150px;
+    background: url(../Galerija/green-ivy.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+.div2 {
+    border: 1px solid black;
+    height: 120px;
+    width: 150px;
+    background: url(../Galerija/green-ivy.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+.div3 {
+    border: 1px solid black;
+    height: 120px;
+    width: 150px;
+    background: url(../Galerija/green-ivy.jpg);
+    background-repeat: no-repeat;
+  }
