@@ -6,7 +6,7 @@ body {
 .image {
     background: url(../Galerija/two.jpg), no-repeat center;
     background-size: cover;
-    height: 500px;
+    height: 700px;
     position: relative;
 }
 
