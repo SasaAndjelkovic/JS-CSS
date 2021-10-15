@@ -235,3 +235,130 @@ const completeData = Object.assign({}, data, otherData)
 console.log(completeData.b);
 
 // -> 5
+
+
+
+//18. 
+Promise.resolve(3)
+    .then(() => Promise.resolve(4))
+    .then(x => console.log(x));
+
+// -> 4
+
+
+
+//19. 
+const personOne = {
+    name: 'Boban',
+    age: 30
+};
+
+let boban = personOne;
+boban.age = 28;
+
+console.log('boban.age');
+
+// -> boban.age
+
+
+
+//20.
+const a = '0'
+console.log(!!a === false); // -> false
+
+const b = 2.02362;
+console.log(b.toFixed(2)==2.02); // -> true
+
+const c = '5.82';
+console.log(parseInt(c, 10) == '5'); // -> true
+
+const d = 'false';
+console.log(Boolean(d)===false); // -> false
+
+const e = true;
+console.log('${e}'===true); // -> false
+
+const f = null;
+console.log(f=='null') // -> false
+
+const g = NaN;
+console.log(g == parseFloat('true')) // ->false
+
+
+
+//21. 
+const then = async () => {
+    console.log(await Promise.resolve(3))
+};
+
+then();
+
+// -> 3
+
+
+
+//22. 
+class NumberBox {
+    constructor(initialValue) {
+        this._value = initialValue;
+    }
+
+    get value() {
+        return this._value;
+    }
+
+    set value(newValue) {
+        this._value = newValue;
+    }
+
+    get increment () {
+        this.value++;
+    }
+
+}
+
+const box = new NumberBox(2);
+box.increment;
+
+console.log(box.value);
+
+// -> 3
+
+
+
+//23.
+Object.prototype.value = 2;
+Object.prototype.increaseValue = function() {
+    this.value++;
+};
+const objA = {};
+objA.increaseValue();
+
+const objB = {};
+Object.prototype.increaseValue();
+
+const objC = { value: 10 };
+objC.increaseValue();
+
+console.log(objA.value, objB.value, objC.value);
+
+// -> 3 3 11
+
+
+
+//24. 
+const later = (func) => {
+    return new Promise ((resolve, reject) => {
+        if (later) {
+            resolve (func(4));
+        } else {
+            reject (new Error('later is not defined'));
+        }
+    })
+}
+
+later(x => Promise.resolve(12+x))
+    .then(console.log)
+    .catch(console.log);
+
+// ->16
