@@ -79,3 +79,42 @@ console.log(timeForMilkAndCookies(new Date(2013, 11, 23))) // ➞ false
 console.log(timeForMilkAndCookies(new Date(3000, 11, 24))) // ➞ true
 
 console.log(new Date(2013, 0, 7));
+
+
+//7. Which Function Returns the Larger Number?
+const whichIsLarger = (f, g) => 
+	f() === g() ? res = 'neither' : (f() > g()) ? res = 'f' : res = 'g';
+	
+
+console.log(whichIsLarger(() => 5, () => 10)) // ➞ "g"
+console.log(whichIsLarger(() => 25,  () => 25)) // ➞ "neither"
+console.log(whichIsLarger(() => 505050, () => 5050)) // ➞ "f"
+
+
+//8. Convert a Number to Base-2
+const binary = decimal => {
+	if (decimal === 0) return '0';
+	let med = 0;
+	for (let i = 0; i < 10; i++) {
+		if (decimal >= 2**i) med++;
+	}
+	let str ='';
+	for (let j = med-1; j >= 0; j--) {
+		if (decimal >= 2**j) {
+			str += '1';
+			decimal = decimal - 2**j;
+		} else str += '0';
+	}
+	return str;
+}
+
+console.log(binary(1)); // ➞ "1"
+// 1*1 = 1
+console.log(binary(5)); //➞ "101"
+// 1*1 + 1*4 = 5
+console.log(binary(10)); // ➞ "1010"
+// 1*2 + 1*8 = 10
+
+//the best solution
+const binary = decimal => decimal.toString(2);
+
