@@ -169,7 +169,7 @@ let promise = new Promise ((resolve, reject) => {
 
 //13. Number of Squares in an N * N Grid
 const numberSquares = num => 
-	num === 1 ? 1 :
+	num === 1 ? 1 :         //ako nema ovog uslova rekurzija cini RangeError: Maximum call stack size exceeded
 	num ** 2 + numberSquares (num - 1)
 
 console.log(numberSquares(2)) // ➞ 5
@@ -181,3 +181,34 @@ const power = (base, exponent) =>
 	exponent == 0 ? 1 : base * power (base, exponent -1);
 
 console.log(power(2, 3));
+
+
+//14. Largest Swap
+const largestSwap = twoDigit => 
+	Math.floor(twoDigit / 10) >= twoDigit % 10; 
+
+console.log(largestSwap(14)) // ➞ false
+console.log(largestSwap(53)) // ➞ true
+console.log(largestSwap(99)) // ➞ true
+
+
+//15. What's Hiding Amongst the Crowd?
+const detectWord = string => {
+	let word = '';
+	for (let i = 0; i < string.length; i++) {
+		if (string[i] === string[i].toLowerCase()) {
+			word += string[i]
+		}
+	}
+	return word;
+} 
+
+const detectWord = string => {
+	string.filter(letter => letter === letter.toLowerCase())
+}
+
+
+console.log(detectWord("UcUNFYGaFYFYGtNUH")) //➞ "cat"
+console.log(detectWord("bEEFGBuFBRrHgUHlNFYaYr")) // ➞ "burglar"
+console.log(detectWord("YFemHUFBbezFBYzFBYLleGBYEFGBMENTment")) // ➞ "embezzlement"
+
