@@ -165,3 +165,19 @@ let promise = new Promise ((resolve, reject) => {
 	}, 1000)
 })
 //sve slozenije koncepte radi posle JavaScriptElokventno
+
+
+//13. Number of Squares in an N * N Grid
+const numberSquares = num => 
+	num === 1 ? 1 :
+	num ** 2 + numberSquares (num - 1)
+
+console.log(numberSquares(2)) // ➞ 5
+console.log(numberSquares(4)) // ➞ 30
+console.log(numberSquares(5)) // ➞ 55
+
+//Rekurzija
+const power = (base, exponent) => 
+	exponent == 0 ? 1 : base * power (base, exponent -1);
+
+console.log(power(2, 3));
