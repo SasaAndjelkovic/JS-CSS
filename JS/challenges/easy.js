@@ -186,10 +186,14 @@ console.log(power(2, 3));
 //14. Largest Swap
 const largestSwap = twoDigit => 
 	Math.floor(twoDigit / 10) >= twoDigit % 10; 
-
+	
 console.log(largestSwap(14)) // ➞ false
 console.log(largestSwap(53)) // ➞ true
 console.log(largestSwap(99)) // ➞ true
+
+//another solution
+const largestSwap = num =>
+	num.toString().charAt(0) >= num.toString().charAt(1);
 
 
 //15. What's Hiding Amongst the Crowd?
@@ -203,12 +207,19 @@ const detectWord = string => {
 	return word;
 } 
 
-const detectWord = string => {
-	string.filter(letter => letter === letter.toLowerCase())
-}
-
-
 console.log(detectWord("UcUNFYGaFYFYGtNUH")) //➞ "cat"
 console.log(detectWord("bEEFGBuFBRrHgUHlNFYaYr")) // ➞ "burglar"
 console.log(detectWord("YFemHUFBbezFBYzFBYLleGBYEFGBMENTment")) // ➞ "embezzlement"
+
+//best solution
+
+const detectWord = str =>
+	[...str].filter(c => c.toLowerCase()===c).join('')
+
+//RegExp solution 
+
+const detectWord = str => str.replace(/[A-Z]/g, '');
+
+
+//16. 
 
