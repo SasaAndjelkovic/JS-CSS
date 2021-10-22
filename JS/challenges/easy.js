@@ -222,7 +222,6 @@ const detectWord = str => str.replace(/[A-Z]/g, '');
 
 
 //16. Older Than Me
-
 class Person {
 	constructor (name, age) {
 	this.name = name;
@@ -233,8 +232,6 @@ class Person {
 		a.age < this.age ? 'younger than' : 'the same age as'} me.`;
 }	
 
-
-
 const p1 = new Person("Samuel", 24);
 const p2 = new Person("Joel", 36);
 const p3 = new Person("Lily", 24);
@@ -242,3 +239,16 @@ const p3 = new Person("Lily", 24);
 console.log(p1.compareAge(p2)) // -> "Joel is older than me."
 console.log(p2.compareAge(p1)) // ➞ "Samuel is younger than me."
 console.log(p1.compareAge(p3)) // ➞ "Lily is the same age as me."
+
+
+//17. Drink Sorting
+drinks = [
+	{name: "lemonade", price: 50},
+	{name: "lime", price: 10}
+  ]
+
+const sortDrinkByPrice = drnc => 
+	drnc.sort((firstItem, secondItem) => firstItem.price - secondItem.price );
+
+
+console.log(sortDrinkByPrice(drinks)) // ➞ [{name: "lime", price: 10}, {name: "lemonade", price: 50}]
