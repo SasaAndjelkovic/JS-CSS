@@ -261,3 +261,15 @@ const tuckIn = (arr1, arr2) => [arr1[0], ...arr2, arr1[arr1.length-1]]
 console.log(tuckIn([1, 10], [2, 3, 4, 5, 6, 7, 8, 9])) // ➞ [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 console.log(tuckIn([15,150], [45, 75, 35])) // ➞ [15, 45, 75, 35, 150]
 console.log(tuckIn([[1, 2], [5, 6]], [[3, 4]])) // ➞ [[1, 2], [3, 4], [5, 6]]
+
+
+//19. Find the Amount of Potatoes
+const potatoes = veg => {
+	const regexp = /potato/gi;
+	const matches_array = veg.match(regexp);
+	return matches_array.length;
+}
+
+console.log(potatoes("potato")) // ➞ 1
+console.log(potatoes("potatopotato")) // ➞ 2
+console.log(potatoes("potatoapple")) // ➞ 1
