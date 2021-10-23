@@ -277,3 +277,21 @@ const potatoes = veg =>
 console.log(potatoes("potato")) // ➞ 1
 console.log(potatoes("potatopotato")) // ➞ 2
 console.log(potatoes("potatoapple")) // ➞ 1
+
+
+//20. Hex to Binary
+const toBinary = hex => hex.toString(2)
+
+console.log(toBinary(0xFF)) // ➞ "11111111"
+console.log(toBinary(0xAA)) // ➞ "10101010"
+console.log(toBinary(0xFA)) // ➞ "11111010"
+
+
+//21. Slightly Superior
+const isFirstSuperior = (first, second) => first > second
+
+console.log(isFirstSuperior(["a", "d", "c"], ["a", "b", "c"])) // ➞ true
+console.log(isFirstSuperior(["zebra", "ostrich", "whale"], ["ant", "ostrich", "whale"])) // ➞ true
+console.log(isFirstSuperior([1, 2, 3, 4], [1, 2, 4, 4])) // ➞ false
+console.log(isFirstSuperior([true, 10, "zebra"], [true, 10, "zebra"])) // ➞ false
+// pogledaj every, some, forEach
