@@ -82,9 +82,9 @@ console.log(new Date(2013, 0, 7));
 
 
 //7. Which Function Returns the Larger Number?
-const whichIsLarger = (f, g) => 
+const whichIsLarger = (f, g) =>
 	f() === g() ? res = 'neither' : (f() > g()) ? res = 'f' : res = 'g';
-	
+
 
 console.log(whichIsLarger(() => 5, () => 10)) // ➞ "g"
 console.log(whichIsLarger(() => 25,  () => 25)) // ➞ "neither"
@@ -121,7 +121,7 @@ const binary = decimal => decimal.toString(2);
 
 //9. Check if One Array can be Nested in Another
 const canNest = (arr1, arr2) =>
-	Math.min(...arr1) > Math.min(...arr2) && 
+	Math.min(...arr1) > Math.min(...arr2) &&
 	Math.max(...arr1) < Math.max(...arr2);
 
 console.log(canNest([1, 2, 3, 4], [0, 6])) //➞ true
@@ -148,13 +148,13 @@ console.log("pink flag red flag black flag blue flag green flag red flag ".match
 
 
 //12. Promises III: Native Promise, Introducing the Executor
-/*Promises are just objects that contain the outcome of asynchronous operations. 
-So when do you use one? When you want to control the outcome of an asynchronous operation. 
+/*Promises are just objects that contain the outcome of asynchronous operations.
+So when do you use one? When you want to control the outcome of an asynchronous operation.
 All you have to do is wrap the asynchronous function with a promise constructor.
 
-The promise constructor requires you to pass a function called the executor which takes two parameters, resolve and reject. 
+The promise constructor requires you to pass a function called the executor which takes two parameters, resolve and reject.
 Both are functions that you use to pass or reject a value that is usually the result of the async operation.
-setTimeout is a browser API that is very commonly used in tutorials to represent async operations. 
+setTimeout is a browser API that is very commonly used in tutorials to represent async operations.
 After 1000ms has passed, we call the callback function in setTimeout() and pass a string "edabit" to the resolve function.
 
 Here's an example of a simple promise:*/
@@ -168,7 +168,7 @@ let promise = new Promise ((resolve, reject) => {
 
 
 //13. Number of Squares in an N * N Grid
-const numberSquares = num => 
+const numberSquares = num =>
 	num === 1 ? 1 :         //ako nema ovog uslova rekurzija cini RangeError: Maximum call stack size exceeded
 	num ** 2 + numberSquares (num - 1)
 
@@ -177,16 +177,16 @@ console.log(numberSquares(4)) // ➞ 30
 console.log(numberSquares(5)) // ➞ 55
 
 //Rekurzija
-const power = (base, exponent) => 
+const power = (base, exponent) =>
 	exponent == 0 ? 1 : base * power (base, exponent -1);
 
 console.log(power(2, 3));
 
 
 //14. Largest Swap
-const largestSwap = twoDigit => 
-	Math.floor(twoDigit / 10) >= twoDigit % 10; 
-	
+const largestSwap = twoDigit =>
+	Math.floor(twoDigit / 10) >= twoDigit % 10;
+
 console.log(largestSwap(14)) // ➞ false
 console.log(largestSwap(53)) // ➞ true
 console.log(largestSwap(99)) // ➞ true
@@ -205,7 +205,7 @@ const detectWord = string => {
 		}
 	}
 	return word;
-} 
+}
 
 console.log(detectWord("UcUNFYGaFYFYGtNUH")) //➞ "cat"
 console.log(detectWord("bEEFGBuFBRrHgUHlNFYaYr")) // ➞ "burglar"
@@ -216,7 +216,7 @@ console.log(detectWord("YFemHUFBbezFBYzFBYLleGBYEFGBMENTment")) // ➞ "embezzle
 const detectWord = str =>
 	[...str].filter(c => c.toLowerCase()===c).join('')
 
-//RegExp solution 
+//RegExp solution
 
 const detectWord = str => str.replace(/[A-Z]/g, '');
 
@@ -227,10 +227,10 @@ class Person {
 	this.name = name;
 	this.age = age;
 	}
-	compareAge = a => 
-	`${a.name} is ${a.age > this.age ? 'older than' : 
+	compareAge = a =>
+	`${a.name} is ${a.age > this.age ? 'older than' :
 		a.age < this.age ? 'younger than' : 'the same age as'} me.`;
-}	
+}
 
 const p1 = new Person("Samuel", 24);
 const p2 = new Person("Joel", 36);
@@ -247,7 +247,7 @@ drinks = [
 	{name: "lime", price: 10}
   ]
 
-const sortDrinkByPrice = drnc => 
+const sortDrinkByPrice = drnc =>
 	drnc.sort((firstItem, secondItem) => firstItem.price - secondItem.price );
 
 
@@ -257,18 +257,22 @@ console.log(sortDrinkByPrice(drinks)) // ➞ [{name: "lime", price: 10}, {name: 
 //18. Tuck in Array   (Use the spread syntax to solve this challenge.)
 const tuckIn = (arr1, arr2) => [arr1[0], ...arr2, arr1[arr1.length-1]]
 
-	
+
 console.log(tuckIn([1, 10], [2, 3, 4, 5, 6, 7, 8, 9])) // ➞ [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 console.log(tuckIn([15,150], [45, 75, 35])) // ➞ [15, 45, 75, 35, 150]
 console.log(tuckIn([[1, 2], [5, 6]], [[3, 4]])) // ➞ [[1, 2], [3, 4], [5, 6]]
 
 
 //19. Find the Amount of Potatoes
-const potatoes = veg => {
-	const regexp = /potato/gi;
-	const matches_array = veg.match(regexp);
-	return matches_array.length;
-}
+const potatoes = veg => 
+	veg.match(/potato/gi).length;
+	// {const regexp = /potato/gi;
+	// const matches_array = veg.match(regexp);
+	// return matches_array.length;}
+
+//another solution
+const potatoes = veg => 
+	veg.split("potato").length-1
 
 console.log(potatoes("potato")) // ➞ 1
 console.log(potatoes("potatopotato")) // ➞ 2
