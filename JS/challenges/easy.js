@@ -307,3 +307,21 @@ console.log(charCount("b", "big fat bubble")) // ➞ 4
 //another.solution
 const charCount = (myChar, str) => 
 	[...str].filter(x => x===myChar).length;
+
+
+//23. No Conditionals?
+const flip = num => 
+	Math.abs(1 - num);
+
+console.log(flip(1)) // ➞ 0
+console.log(flip(0)) // ➞ 1
+
+
+//24. Number Split
+const numberSplit = num => 
+	[Math.floor(num/2), Math.floor(num/2) + Math.abs(num % 2)]
+
+console.log(numberSplit(4)) // ➞ [2, 2]
+console.log(numberSplit(10)) // ➞ [5, 5]
+console.log(numberSplit(11)) // ➞ [5, 6]
+console.log(numberSplit(-9)) // ➞ [-5, -4]
