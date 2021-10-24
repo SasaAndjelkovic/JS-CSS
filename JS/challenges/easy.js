@@ -295,3 +295,15 @@ console.log(isFirstSuperior(["zebra", "ostrich", "whale"], ["ant", "ostrich", "w
 console.log(isFirstSuperior([1, 2, 3, 4], [1, 2, 4, 4])) // ➞ false
 console.log(isFirstSuperior([true, 10, "zebra"], [true, 10, "zebra"])) // ➞ false
 // pogledaj every, some, forEach
+
+
+//22. Count Instances of a Character in a String
+const charCount = (str1, str2) => 
+	str2.split(str1).length-1
+
+console.log(charCount("a", "edabit")) // ➞ 1
+console.log(charCount("c", "Chamber of secrets")) // ➞ 1
+console.log(charCount("b", "big fat bubble")) // ➞ 4
+//another.solution
+const charCount = (myChar, str) => 
+	[...str].filter(x => x===myChar).length;
