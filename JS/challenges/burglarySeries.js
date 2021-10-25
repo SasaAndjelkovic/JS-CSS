@@ -69,7 +69,6 @@ console.log(isItGone({}, 'tammy'))
 
 
 //Burglary Series (04): Add its Name
-
 const addName = (obj, name, value) => 
   Object.assign(obj, {[name]: value})
 //https://ui.dev/computed-property-names/
@@ -78,3 +77,13 @@ const addName = (obj, name, value) =>
 console.log(addName({}, "Brutus", 300)) // ➞ { Brutus: 300 }
 console.log(addName({ piano: 500 }, "Brutus", 400)) // ➞ { piano: 500, Brutus: 400 }
 console.log(addName({ piano: 500, stereo: 300 }, "Caligula", 440)) // ➞ { piano: 500, stereo: 300, Caligula: 440 }
+
+
+//Burglary Series (05): Third Most Expensive
+const thirdMostExpensive = obj => 
+    Object.keys(obj).sort((a, b) => obj[b] - obj[a])[2] || false;
+
+console.log(thirdMostExpensive({})) // ➞ false
+console.log(thirdMostExpensive({ piano: 100, tv: 200 })) // ➞ false
+console.log(thirdMostExpensive({ piano: 400, tv: 300, stereo: 200 })) //  ➞ "stereo"
+console.log(thirdMostExpensive({ piano: 1000, tv: 500, ball: 10 , mirror: 200, })) // ➞ "mirror"
