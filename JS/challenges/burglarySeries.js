@@ -87,3 +87,21 @@ console.log(thirdMostExpensive({})) // ➞ false
 console.log(thirdMostExpensive({ piano: 100, tv: 200 })) // ➞ false
 console.log(thirdMostExpensive({ piano: 400, tv: 300, stereo: 200 })) //  ➞ "stereo"
 console.log(thirdMostExpensive({ piano: 1000, tv: 500, ball: 10 , mirror: 200, })) // ➞ "mirror"
+
+
+//Burglary Series (06): Convert to Number
+const convertToNumber = obj => 
+    (Object.keys(obj).forEach(k => obj[k] = +obj[k]), obj);
+    //forEach(function callbackFn(element, index, array) { ... }, thisArg)
+
+console.log(convertToNumber({ piano: "200" })) // ➞ { piano: 200 }
+console.log(convertToNumber({ piano: "200", tv: "300" })) // ➞ { piano: 200, tv: 300 }
+console.log(convertToNumber({ piano: "200", tv: "300", stereo: "400" })) // ➞ { piano: 200, tv: 300, stereo: 400 }
+
+
+//Burglary Series (07): Make a Copy
+const makeCopy = obj =>
+  // ({...obj})
+  Object.assign({}, obj);
+
+console.log(makeCopy({ piano: 100, tv: 50 })) //➞ { piano: 100, tv: 50 }
