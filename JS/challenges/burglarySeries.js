@@ -66,3 +66,15 @@ console.log(isItGone({
 console.log(isItGone({}, 'tammy'))
 // ➞ "Timmy is here!"
 // Timmy is not in the object.
+
+
+//Burglary Series (04): Add its Name
+
+const addName = (obj, name, value) => 
+  Object.assign(obj, {[name]: value})
+//https://ui.dev/computed-property-names/
+//Object.assign(target, ...sources)
+
+console.log(addName({}, "Brutus", 300)) // ➞ { Brutus: 300 }
+console.log(addName({ piano: 500 }, "Brutus", 400)) // ➞ { piano: 500, Brutus: 400 }
+console.log(addName({ piano: 500, stereo: 300 }, "Caligula", 440)) // ➞ { piano: 500, stereo: 300, Caligula: 440 }
