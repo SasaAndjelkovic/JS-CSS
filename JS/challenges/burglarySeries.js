@@ -105,3 +105,21 @@ const makeCopy = obj =>
   Object.assign({}, obj);
 
 console.log(makeCopy({ piano: 100, tv: 50 })) //➞ { piano: 100, tv: 50 }
+
+
+//Burglary Series (08): Remove an Entry
+const removeEntry = (obj, itemName) => {
+  const copy = {...obj}
+	delete copy[itemName]
+	return copy
+}
+
+//another solution
+const removeEntry = (obj, itemName) => {
+    let copy =	Object.assign({}, obj)
+    delete copy[itemName]
+    return copy
+}
+
+console.log(removeEntry({ piano: 300, tv: 100, skate: 50 }, "skate")) // ➞ { piano: 300, tv: 100 }
+console.log(removeEntry({ mirror: 500, painting: 1 }, "mirror")) // ➞ { painting: 1 }
