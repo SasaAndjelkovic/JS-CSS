@@ -132,9 +132,20 @@ const isBelow5000 = obj =>
   // copy.filter(value => value >= 5000);
   // return copy;   hihi, ovako ne moze
   Object.fromEntries(Object.entries(obj).filter(([, value]) => value >= 5000));
-
+  //The Object.fromEntries() method transforms a list of key-value pairs into an object.
+  //A new object whose properties are given by the entries of the iterable.
+  //The Object.entries() method returns an array of a given object's own enumerable string-keyed property [key, value] pairs.s
 
 console.log(isBelow5000({ tv: 4999, guitar:5000, fork: 5001 })) // ➞ { guitar:5000, fork: 5001 }
 console.log(isBelow5000({ tv: 4999 })) // ➞ {}
 console.log(isBelow5000({ guitar: 5000 })) // ➞ { guitar: 5000 }
 console.log(isBelow5000({})) // ➞ {}
+
+
+//Burglary Series (10): Calculate Difference
+const calculateDifference = (obj, limit) => 
+  Object.values(obj).reduce((total, num) => total + num, 0) - limit
+
+console.log(calculateDifference({ "baseball bat": 20 }, 5)) // ➞ 15
+console.log(calculateDifference({ skate: 10, painting: 20 }, 19)) // ➞ 11
+console.log(calculateDifference({ skate: 200, painting: 200, shoes: 1 }, 400)) // ➞ 1
