@@ -160,3 +160,37 @@ const whatYouSaid = obj =>
 console.log(whatYouSaid({ 1: "Mommy", 2: "please", 3: "help" })) // ➞ "Mommy please help please"
 console.log(whatYouSaid({ 1: "Me", 2: "innocent", 3: "is" })) // ➞ "Me innocent is innocent"
 console.log(whatYouSaid({ 1: "Must", 2: "lawyer", 3: "call" })) // ➞ "Must lawyer call lawyer"
+
+
+//Burglary Series (12): Get Vodka Bottle
+const rammsteinNumber = (obj, number) => {  
+    //Object.value(obj).filter(a => a === number);  -> TypeError: Object.value is not a function value i filter ne idu zajedno
+    const fil = Object.fromEntries(Object.entries(obj).filter(([, value]) => value == number));
+    //prvi filter daje parove sa potrebnim brojem
+    return Object.keys(obj).filter(a => a !== 'whiskey' && a !=='beer');
+    //drugi filter sece kljuceve koji su whiskey i beer
+}
+
+console.log(rammsteinNumber({ whiskey: 100, "Rammstein A": 100, "Rammstein B": 50 }, 100)) // ➞ "Rammstein A"
+console.log(rammsteinNumber({ whiskey: 100, "Rammstein A": 100, "Rammstein B": 50 }, 50)) // ➞ "Rammstein B"
+console.log(rammsteinNumber({ whiskey: 100, "Rammstein A": 100, "Rammstein D": 70, beer: 70 }, 70)) // ➞ "Rammstein D"
+
+/*samo prvi filter
+{ whiskey: 100, 'Rammstein A': 100 }
+{ 'Rammstein B': 50 }
+{ 'Rammstein D': 70, beer: 70 }*/
+
+/*samo drugi filter
+[ 'Rammstein A', 'Rammstein B' ]
+[ 'Rammstein A', 'Rammstein B' ]
+[ 'Rammstein A', 'Rammstein D' ]*/
+
+//another solution
+const getVodkaBottle = (obj, num) =>
+  Object.keys(obj).find(key => key.includes('Rammstein') && obj[key] === num);
+
+//another solution
+const getVodkaBottle = (obj, num) =>
+	Object.entries(obj).filter(n => n[0].includes("Rammstein") && n[1] === num)[0][0];
+
+
