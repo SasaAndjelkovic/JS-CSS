@@ -123,3 +123,18 @@ const removeEntry = (obj, itemName) => {
 
 console.log(removeEntry({ piano: 300, tv: 100, skate: 50 }, "skate")) // ➞ { piano: 300, tv: 100 }
 console.log(removeEntry({ mirror: 500, painting: 1 }, "mirror")) // ➞ { painting: 1 }
+
+
+//Burglary Series (09): Filter Values
+const isBelow5000 = obj => 
+  // const copy = {...obj};
+  // console.log(copy);
+  // copy.filter(value => value >= 5000);
+  // return copy;   hihi, ovako ne moze
+  Object.fromEntries(Object.entries(obj).filter(([, value]) => value >= 5000));
+
+
+console.log(isBelow5000({ tv: 4999, guitar:5000, fork: 5001 })) // ➞ { guitar:5000, fork: 5001 }
+console.log(isBelow5000({ tv: 4999 })) // ➞ {}
+console.log(isBelow5000({ guitar: 5000 })) // ➞ { guitar: 5000 }
+console.log(isBelow5000({})) // ➞ {}
