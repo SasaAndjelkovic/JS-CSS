@@ -194,3 +194,13 @@ const getVodkaBottle = (obj, num) =>
 	Object.entries(obj).filter(n => n[0].includes("Rammstein") && n[1] === num)[0][0];
 
 
+//Burglary Series (13): Sort That List
+const sortList = obj => 
+    //Object.fromEntries(Object.entries(obj).sort((a, b) => obj[b] - obj[a])); nema sintaksnu greske ali ne daje rezultat
+    Object.fromEntries(Object.entries(obj).sort().reverse());
+
+console.log(sortList({ c: 100, a: 50, b: 10, d: 50 })) // ➞ { d: 50, c: 100, b: 10, a: 50 }
+console.log(sortList({ ab: 10, ac: 10, ad: 10 })) // ➞ { ad: 10, ac: 10, ab: 10 }
+console.log(sortList({ piano: 5, stereo: 10, suitcase: 1 })) // ➞ { suitcase: 1, stereo: 10, piano: 5 }
+
+
