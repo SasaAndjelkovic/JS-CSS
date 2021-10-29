@@ -149,3 +149,14 @@ const calculateDifference = (obj, limit) =>
 console.log(calculateDifference({ "baseball bat": 20 }, 5)) // ➞ 15
 console.log(calculateDifference({ skate: 10, painting: 20 }, 19)) // ➞ 11
 console.log(calculateDifference({ skate: 200, painting: 200, shoes: 1 }, 400)) // ➞ 1
+
+
+//Burglary Series (11): Say What
+const whatYouSaid = obj => 
+    `${Object.values(obj).join(" ")} ${obj[2]}`;
+//The join() method creates and returns a new string by concatenating all of the elements in an array 
+//(or an array-like object), separated by commas or a specified separator string. 
+
+console.log(whatYouSaid({ 1: "Mommy", 2: "please", 3: "help" })) // ➞ "Mommy please help please"
+console.log(whatYouSaid({ 1: "Me", 2: "innocent", 3: "is" })) // ➞ "Me innocent is innocent"
+console.log(whatYouSaid({ 1: "Must", 2: "lawyer", 3: "call" })) // ➞ "Must lawyer call lawyer"
