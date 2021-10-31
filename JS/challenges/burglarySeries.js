@@ -204,3 +204,10 @@ console.log(sortList({ ab: 10, ac: 10, ad: 10 })) // ➞ { ad: 10, ac: 10, ab: 1
 console.log(sortList({ piano: 5, stereo: 10, suitcase: 1 })) // ➞ { suitcase: 1, stereo: 10, piano: 5 }
 
 
+//Burglary Series (14): Adjectives Total
+const totalAmountAdjectives = obj => 
+    Object.values(obj).reduce((a, b, num) => num++, 0) + 1
+
+console.log(totalAmountAdjectives({ a: "moron" })) // ➞ 1
+console.log(totalAmountAdjectives({ a: "idiot", b: "idiot", c: "idiot" })) // ➞ 3
+console.log(totalAmountAdjectives({ a: "moron", b: "scumbag", c: "moron", d: "dirtbag" })) // ➞ 4
