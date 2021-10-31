@@ -8,7 +8,7 @@ const stolenItems = {
 const calculateLosses = obj => 
 	Object.values(obj).reduce((total, num) => total + num, 0) || 'Lucky you!';
     //Ako nema 0, onda -> TypeError: Reduce of empty array with no initial value
-    //reduce((previousValue, currentValue, currentIndex, array) => { ... }, initialValue)s
+    //reduce((previousValue, currentValue, currentIndex, array) => { ... }, initialValue)
 
 console.log(calculateLosses(stolenItems)) // ➞ 100
 console.log(calculateLosses({
@@ -206,8 +206,33 @@ console.log(sortList({ piano: 5, stereo: 10, suitcase: 1 })) // ➞ { suitcase: 
 
 //Burglary Series (14): Adjectives Total
 const totalAmountAdjectives = obj => 
-    Object.values(obj).reduce((a, b, num) => num++, 0) + 1
+    //Object.values(obj).reduce((a, b, num) => num++, 0) + 1
+    Object.keys(obj).length
 
 console.log(totalAmountAdjectives({ a: "moron" })) // ➞ 1
 console.log(totalAmountAdjectives({ a: "idiot", b: "idiot", c: "idiot" })) // ➞ 3
 console.log(totalAmountAdjectives({ a: "moron", b: "scumbag", c: "moron", d: "dirtbag" })) // ➞ 4
+
+
+//Burglary Series (15): Number of Occurrences
+const countNumberOfOccurrences = obj => 
+  Object.values(obj).reduce((a, b) => (a[b] = (a[b] || 0) + 1, a), {})
+  
+console.log(countNumberOfOccurrences({
+  a: "moron",
+  b: "scumbag",
+  c: "moron",
+  d: "idiot",
+  e: "idiot"
+})) // ➞ { moron: 2, scumbag: 1, idiot: 2 }
+
+console.log(countNumberOfOccurrences({
+  a: "moron",
+  b: "moron",
+  c:"moron"
+})) // ➞ { moron: 3 }
+
+console.log(countNumberOfOccurrences({
+  a: "idiot",
+  b: "scumbag"
+})) // ➞ { idiot: 1, scumbag: 1 }
