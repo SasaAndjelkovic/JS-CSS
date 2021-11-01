@@ -279,3 +279,60 @@ console.log(groupedPeople);
 //   ],
 //   21: [{ name: 'Alice', age: 21 }]
 // }
+
+
+//Burglary Series (16): Nested objects
+//Hard
+const determineWhoCursedTheMost = obj => {
+    const c = Object.values(obj).reduce((a, b) => a + b.me - b.spouse, 0);
+	  return (c ? c > 0 ? "ME" : "SPOUSE" : "DRAW") + "!";
+}
+
+console.log(determineWhoCursedTheMost({
+  round1: {
+    me: 10,
+    spouse: 5,
+  },
+  round2: {
+    me: 5,
+    spouse: 10,
+  },
+  round3: {
+    me: 10,
+    spouse: 10,
+  },
+})) // ➞ "DRAW!"
+
+
+console.log(determineWhoCursedTheMost({
+  round1: {
+    me: 40,
+    spouse: 5,
+  },
+  round2: {
+    me: 9,
+    spouse: 10,
+  },
+  round3: {
+    me: 9,
+    spouse: 10,
+  },
+})) // ➞ "ME!"
+
+
+console.log(determineWhoCursedTheMost({
+  round1: {
+    me: 10,
+    spouse: 5,
+  },
+  round2: {
+    me: 9,
+    spouse: 44,
+  },
+  round3: {
+    me: 10,
+    spouse: 55,
+  },
+})) // ➞ "SPOUSE!"
+
+
