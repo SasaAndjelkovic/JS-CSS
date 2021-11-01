@@ -1,4 +1,5 @@
 //Burglary Series (01): Calculate Total Losses
+//Medium
 const stolenItems = {
     tv: 30,
     skate: 20,
@@ -18,6 +19,7 @@ console.log(calculateLosses({})) // ➞ "Lucky you!"
 
   
 //Burglary Series (02): Most Valuable Item
+//Medium
 const mostExpensiveItem = obj =>
  // Object.values(obj).Math.max(...arg); // TypeError: Cannot read property 'max' of undefined
  // Math.max(...Object.values(obj)) // -> 2000 / 30 / 50;
@@ -41,7 +43,7 @@ console.log(mostExpensiveItem({
 
 
 //Burglary Series (03): Is It Gone?
-
+//Medium
 const obj = {
   tv: 30,
   timmy: 20,
@@ -69,6 +71,7 @@ console.log(isItGone({}, 'tammy'))
 
 
 //Burglary Series (04): Add its Name
+//Medium
 const addName = (obj, name, value) => 
   Object.assign(obj, {[name]: value})
 //https://ui.dev/computed-property-names/
@@ -80,6 +83,7 @@ console.log(addName({ piano: 500, stereo: 300 }, "Caligula", 440)) // ➞ { pian
 
 
 //Burglary Series (05): Third Most Expensive
+//Hard
 const thirdMostExpensive = obj => 
     Object.keys(obj).sort((a, b) => obj[b] - obj[a])[2] || false;
 
@@ -90,6 +94,7 @@ console.log(thirdMostExpensive({ piano: 1000, tv: 500, ball: 10 , mirror: 200, }
 
 
 //Burglary Series (06): Convert to Number
+//Medium
 const convertToNumber = obj => 
     (Object.keys(obj).forEach(k => obj[k] = +obj[k]), obj);
     //forEach(function callbackFn(element, index, array) { ... }, thisArg)
@@ -100,6 +105,7 @@ console.log(convertToNumber({ piano: "200", tv: "300", stereo: "400" })) // ➞ 
 
 
 //Burglary Series (07): Make a Copy
+//Very easy
 const makeCopy = obj =>
   // ({...obj})
   Object.assign({}, obj);
@@ -108,6 +114,7 @@ console.log(makeCopy({ piano: 100, tv: 50 })) //➞ { piano: 100, tv: 50 }
 
 
 //Burglary Series (08): Remove an Entry
+//Medium
 const removeEntry = (obj, itemName) => {
   const copy = {...obj}
 	delete copy[itemName]
@@ -126,6 +133,7 @@ console.log(removeEntry({ mirror: 500, painting: 1 }, "mirror")) // ➞ { painti
 
 
 //Burglary Series (09): Filter Values
+//Medium
 const isBelow5000 = obj => 
   // const copy = {...obj};
   // console.log(copy);
@@ -143,6 +151,7 @@ console.log(isBelow5000({})) // ➞ {}
 
 
 //Burglary Series (10): Calculate Difference
+//Easy
 const calculateDifference = (obj, limit) => 
   Object.values(obj).reduce((total, num) => total + num, 0) - limit
 
@@ -152,6 +161,7 @@ console.log(calculateDifference({ skate: 200, painting: 200, shoes: 1 }, 400)) /
 
 
 //Burglary Series (11): Say What
+//Very easy
 const whatYouSaid = obj => 
     `${Object.values(obj).join(" ")} ${obj[2]}`;
 //The join() method creates and returns a new string by concatenating all of the elements in an array 
@@ -163,6 +173,7 @@ console.log(whatYouSaid({ 1: "Must", 2: "lawyer", 3: "call" })) // ➞ "Must law
 
 
 //Burglary Series (12): Get Vodka Bottle
+//Hard
 const rammsteinNumber = (obj, number) => {  
     //Object.value(obj).filter(a => a === number);  -> TypeError: Object.value is not a function value i filter ne idu zajedno
     const fil = Object.fromEntries(Object.entries(obj).filter(([, value]) => value == number));
@@ -195,6 +206,7 @@ const getVodkaBottle = (obj, num) =>
 
 
 //Burglary Series (13): Sort That List
+//Hard
 const sortList = obj => 
     //Object.fromEntries(Object.entries(obj).sort((a, b) => obj[b] - obj[a])); nema sintaksnu greske ali ne daje rezultat
     Object.fromEntries(Object.entries(obj).sort().reverse());
@@ -205,6 +217,7 @@ console.log(sortList({ piano: 5, stereo: 10, suitcase: 1 })) // ➞ { suitcase: 
 
 
 //Burglary Series (14): Adjectives Total
+//Very easy
 const totalAmountAdjectives = obj => 
     //Object.values(obj).reduce((a, b, num) => num++, 0) + 1
     Object.keys(obj).length
@@ -215,9 +228,10 @@ console.log(totalAmountAdjectives({ a: "moron", b: "scumbag", c: "moron", d: "di
 
 
 //Burglary Series (15): Number of Occurrences
+//Hard
 const countNumberOfOccurrences = obj => 
   Object.values(obj).reduce((a, b) => (a[b] = (a[b] || 0) + 1, a), {})
-  
+  //ostaje pitanje sta je to a[b]
 console.log(countNumberOfOccurrences({
   a: "moron",
   b: "scumbag",
@@ -236,3 +250,32 @@ console.log(countNumberOfOccurrences({
   a: "idiot",
   b: "scumbag"
 })) // ➞ { idiot: 1, scumbag: 1 }
+
+//Grouping objects by a property
+let people = [
+  { name: 'Alice', age: 21 },
+  { name: 'Max', age: 20 },
+  { name: 'Jane', age: 20 }
+];
+
+const groupBy = (objectArray, property) => {
+  return objectArray.reduce((acc, obj) => {
+    let key = obj[property]
+    if (!acc[key]) {
+      acc[key] = []
+    }
+    acc[key].push(obj)
+    return acc
+  }, {})
+}
+
+let groupedPeople = groupBy(people, 'age');
+console.log(groupedPeople);
+// groupedPeople is:
+// {
+//   20: [
+//     { name: 'Max', age: 20 },
+//     { name: 'Jane', age: 20 }
+//   ],
+//   21: [{ name: 'Alice', age: 21 }]
+// }
