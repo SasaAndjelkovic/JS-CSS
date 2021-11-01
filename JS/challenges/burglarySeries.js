@@ -285,7 +285,8 @@ console.log(groupedPeople);
 //Hard
 const determineWhoCursedTheMost = obj => {
     const c = Object.values(obj).reduce((a, b) => a + b.me - b.spouse, 0);
-	  return (c ? c > 0 ? "ME" : "SPOUSE" : "DRAW") + "!";
+    return (!c ? 'DRAW' : c > 0 ? 'ME' : 'SPOUSE') + '!';
+	  //return (c ? c > 0 ? "ME" : "SPOUSE" : "DRAW") + "!";
 }
 
 console.log(determineWhoCursedTheMost({
@@ -334,5 +335,21 @@ console.log(determineWhoCursedTheMost({
     spouse: 55,
   },
 })) // ➞ "SPOUSE!"
+
+
+//Burglary Series (19): Prevent Changes
+//Very Easy
+const obj = { noChanges: true }
+
+const preventChanges = param => {
+  // Write your code here, don't use a return statement
+  Object.freeze(param);
+  param.noChanges = false;
+  param.signature = "whatever"
+  return param;
+
+} 
+
+console.log(preventChanges(obj)) // ➞ { noChanges: true }
 
 
