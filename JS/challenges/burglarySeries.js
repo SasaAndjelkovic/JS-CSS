@@ -409,6 +409,8 @@ const obj = {
 
 const signAgain = obj => {
   // add your code here
+  Object.freeze(obj)
+	Object.seal(obj.kitchen)
 
   obj.signature = "Terminator"
   obj.extraProperty = "not possible"
@@ -424,3 +426,4 @@ const signAgain = obj => {
   },
   signature: "Rocky Balboa"
 }*/
+console.log(signAgain(obj));
