@@ -377,3 +377,17 @@ const preventChanges = param => {
 console.log(preventChanges(obj)) // ➞ { noChanges: true }
 
 
+//Burglary Series (20): Sign Your Name
+//Easy
+
+const obj = { yourSignature: "" };
+
+const signYourName = ( obj ) => {
+  // write your code here
+
+  
+  obj.yourSignature = "Whatever";
+  obj.spouseSignature = "Nice Try";
+  return obj;
+
+} // ➞ { yourSignature: "Whatever" }
