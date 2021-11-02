@@ -405,6 +405,11 @@ console.log(determineWinnerOfFight({
 })) // ➞ "SPOUSE!"
 
 
+//Burglary Series (18): Detailed List
+//Very hard
+
+
+
 //Burglary Series (19): Prevent Changes
 //Very Easy
 const obj = { noChanges: true }
@@ -473,5 +478,36 @@ const signAgain = obj => {
 console.log(signAgain(obj));
 
 
+//Burglary Series (22): Sign All
+//Hard
+const obj = {
+  kitchen: {
+    painting: 100,
+    piano: 1000,
+    signature: "",
+  },
+  bathroom: {
+    stereo: 220,
+    signature: "",
+  },
+  signature: "",
+};
+
+const signAll = (param, name) => {
+  Object.fromEntries/Object.keys
+}
+
+console.log(signAll(obj, "Rocky")) /* ➞ {
+  kitchen: {
+    painting: 100,
+    piano: 1000,
+    signature: "Rocky",  // changed
+  },
+  bathroom: {
+    stereo: 220,
+    signature: "Rocky",  // changed
+  },
+  signature: "Rocky",  // changed
+}*/
 
 
