@@ -361,6 +361,50 @@ console.log(determineWhoCursedTheMost({
 })) // ➞ "SPOUSE!"
 
 
+//Burglary Series (17): Who is the Winner?
+//Hard
+const determineWinnerOfFight = obj => {
+
+  let score = Object
+	  				.values(obj)
+	  				.reduce((acc, o) => 
+					  acc + (o.me === o.spouse ? 0
+					  : o.me > o.spouse ? 1 : -1), 0);
+	return score > 0 ? `ME!` : score < 0 ? `SPOUSE!` : `NOBODY!`;
+
+}
+
+console.log(determineWinnerOfFight({
+  round1: {
+    me: 10,
+    spouse: 5,
+  },
+  round2: {
+    me: 5,
+    spouse: 20,
+  },
+  round3: {
+    me: 10,
+    spouse: 10,
+  },
+})) // ➞ "NOBODY!"
+
+console.log(determineWinnerOfFight({
+  round1: {
+    me: 40,
+    spouse: 5,
+  },
+  round2: {
+    me: 9,
+    spouse: 10,
+  },
+  round3: {
+    me: 9,
+    spouse: 10,
+  },
+})) // ➞ "SPOUSE!"
+
+
 //Burglary Series (19): Prevent Changes
 //Very Easy
 const obj = { noChanges: true }
@@ -427,3 +471,7 @@ const signAgain = obj => {
   signature: "Rocky Balboa"
 }*/
 console.log(signAgain(obj));
+
+
+
+
