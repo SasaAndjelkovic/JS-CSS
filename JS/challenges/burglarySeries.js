@@ -231,7 +231,7 @@ console.log(totalAmountAdjectives({ a: "moron", b: "scumbag", c: "moron", d: "di
 //Hard
 const countNumberOfOccurrences = obj => 
   Object.values(obj).reduce((a, b) => (a[b] = (a[b] || 0) + 1, a), {})
-  //ostaje pitanje sta je to a[b]
+  //ostaje pitanje sta je to a[b]; a je objecat, b je key
 console.log(countNumberOfOccurrences({
   a: "moron",
   b: "scumbag",
@@ -250,6 +250,30 @@ console.log(countNumberOfOccurrences({
   a: "idiot",
   b: "scumbag"
 })) // ➞ { idiot: 1, scumbag: 1 }
+
+//Counting instances of values in an object
+let names = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice', 'Bruce']
+
+let countedNames = names.reduce(function (allNames, name) {
+  if (name in allNames) {   // ako postoji key name u objektu allNames povecaj vrednost za jedan
+    allNames[name]++
+  }
+  else {
+    allNames[name] = 1
+  }
+  return allNames
+}, {})
+
+console.log(countedNames)
+// -> countedNames is:
+// -> { 'Alice': 2, 'Bob': 1, 'Tiff': 1, 'Bruce': 2 }
+
+//Kuzma primer
+let obj = {}
+// obj[key] = vrednost - ovde na key dodajes njegovu vrednost
+let a = 'a';
+obj[a] = 1 //  u konzoli ce pisati {a:1}
+console.log(obj);
 
 //Grouping objects by a property
 let people = [
