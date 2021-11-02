@@ -382,12 +382,45 @@ console.log(preventChanges(obj)) // ➞ { noChanges: true }
 
 const obj = { yourSignature: "" };
 
-const signYourName = ( obj ) => {
+const signYourName = obj => {
   // write your code here
-
+  Object.seal(obj);
   
   obj.yourSignature = "Whatever";
   obj.spouseSignature = "Nice Try";
   return obj;
 
-} // ➞ { yourSignature: "Whatever" }
+} 
+
+console.log(signYourName(obj));// ➞ { yourSignature: "Whatever" }
+
+
+//Burglary Series (21): Sign Your Name Again
+//Medium
+
+const obj = {
+  kitchen: {
+    knives: 500,
+    stereo: 200,
+    signature: ""
+  },
+  signature: "Rocky Balboa"
+};
+
+const signAgain = obj => {
+  // add your code here
+
+  obj.signature = "Terminator"
+  obj.extraProperty = "not possible"
+  obj.kitchen.piano = 1000
+  obj.kitchen.signature = "Rocky Balboa"
+  return obj
+
+} /*➞ {
+  kitchen: {
+    knives: 500,
+    stereo: 200,
+    signature: "Rocky Balboa", //only this field was changed
+  },
+  signature: "Rocky Balboa"
+}*/
