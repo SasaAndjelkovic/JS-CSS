@@ -334,3 +334,34 @@ const filterArray = param =>
 console.log(filterArray([1, 2, "a", "b"])) // ➞ [1, 2]
 console.log(filterArray([1, "a", "b", 0, 15])) //➞ [1, 0, 15]
 console.log(filterArray([1, 2, "aasf", "1", "123", 123])) // ➞ [1, 2, 123]
+
+
+//26.Error Messages
+//Conditional (ternary) operator - chains
+const error = param => {
+	return param === 1 ? "Check the fan: e1"
+		 : param === 2 ? "Emergency stop: e2"
+		 : param === 3 ? "Pump Error: e3"
+		 : param === 4 ? "c: e4"
+	     : param === 5 ? "Temperature Sensor Error: e5"
+		 : '101';
+};
+
+console.log(error(1)) // ➞ "Check the fan: e1"
+console.log(error(2)) // ➞ "Emergency stop: e2"
+console.log(error(3)) // ➞ "Pump Error: e3"
+
+//another solution
+
+const x = ["Check the fan: e1", 
+		   "Emergency stop: e2",
+	       "Pump Error: e3",
+	       "c: e4",
+	       "Temperature Sensor Error: e5"];
+	
+const error = param => 
+	(param < 1 || param > 5) ? '101' : x[param - 1]
+	 
+console.log(error(1)) // ➞ "Check the fan: e1"
+console.log(error(2)) // ➞ "Emergency stop: e2"
+console.log(error(3)) // ➞ "Pump Error: e3"
