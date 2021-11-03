@@ -365,3 +365,31 @@ const error = param =>
 console.log(error(1)) // ➞ "Check the fan: e1"
 console.log(error(2)) // ➞ "Emergency stop: e2"
 console.log(error(3)) // ➞ "Pump Error: e3"
+
+//another solution
+
+const error = n => {
+	return {
+		1: 'Check the fan: e1',
+		2: 'Emergency stop: e2',
+		3: 'Pump Error: e3',
+		4: 'c: e4',
+		5: 'Temperature Sensor Error: e5',
+	}[n] || 101
+}
+
+console.log(error(1)) // ➞ "Check the fan: e1"
+console.log(error(2)) // ➞ "Emergency stop: e2"
+console.log(error(3)) // ➞ "Pump Error: e3
+
+
+//27.Doubleton Number
+const doubleton = num => 
+	new Set(String(++num).split("")).size === 2 ? num : doubleton(num)
+
+console.log(doubleton(10)) // ➞ 12
+// 12 has only two distinct numbers 1 and 2
+console.log(doubleton(120)) // ➞ 121
+// 121 has only two distinct numbers 1 and 2
+console.log(doubleton(1234)) // ➞ 1311
+// 1311 has only two distinct numbers 1 and 3
