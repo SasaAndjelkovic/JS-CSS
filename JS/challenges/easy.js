@@ -325,3 +325,12 @@ console.log(numberSplit(4)) // ➞ [2, 2]
 console.log(numberSplit(10)) // ➞ [5, 5]
 console.log(numberSplit(11)) // ➞ [5, 6]
 console.log(numberSplit(-9)) // ➞ [-5, -4]
+
+
+//25. Filter out Strings from an Array
+const filterArray = param => 
+  param.filter(a => typeof a === 'number' && a >=0);
+
+console.log(filterArray([1, 2, "a", "b"])) // ➞ [1, 2]
+console.log(filterArray([1, "a", "b", 0, 15])) //➞ [1, 0, 15]
+console.log(filterArray([1, 2, "aasf", "1", "123", 123])) // ➞ [1, 2, 123]
