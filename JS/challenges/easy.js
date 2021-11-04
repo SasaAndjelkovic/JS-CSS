@@ -404,3 +404,14 @@ const doubleChar = str =>
 console.log(doubleChar("String")) // ➞ "SSttrriinngg"
 console.log(doubleChar("Hello World!")) // ➞ "HHeelllloo  WWoorrlldd!!"
 console.log(doubleChar("1234!_ ")) // ➞ "11223344!!__  "
+
+
+//29.Is it True?
+const isTrue = str =>
+	eval(str.replace('=', '==='))  //Opet RegExp
+
+console.log(isTrue("2=2")) // ➞ true
+console.log(isTrue("8<7")) // ➞ false
+console.log(isTrue("5=13")) // ➞ false
+console.log(isTrue("15>4")) // ➞ true
+
