@@ -393,3 +393,14 @@ console.log(doubleton(120)) // ➞ 121
 // 121 has only two distinct numbers 1 and 2
 console.log(doubleton(1234)) // ➞ 1311
 // 1311 has only two distinct numbers 1 and 3
+
+
+//28.Repeating Letters
+const doubleChar = str => 
+	str.split('').map(x => x + x).join('');
+	//[...str].map(x  => x + x).join``
+
+
+console.log(doubleChar("String")) // ➞ "SSttrriinngg"
+console.log(doubleChar("Hello World!")) // ➞ "HHeelllloo  WWoorrlldd!!"
+console.log(doubleChar("1234!_ ")) // ➞ "11223344!!__  "
