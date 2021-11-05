@@ -251,6 +251,25 @@ console.log(countNumberOfOccurrences({
   b: "scumbag"
 })) // ➞ { idiot: 1, scumbag: 1 }
 
+//dario solution
+const countNumberOfOccurrences = obj => {
+    const value = Object.values(obj); // ['moron', 'scumbag', 'moron', 'idiot', 'idiot']
+
+    const result = value.reduce((acc, nextValue) => {
+        acc[nextValue] = acc[nextValue] ? acc[nextValue] + 1 : 1;
+        return acc;
+      }, {})
+        return result
+  }
+
+  console.log(countNumberOfOccurrences({
+    a: "moron",
+    b: "scumbag",
+    c: "moron",
+    d: "idiot",
+    e: "idiot"
+  }))
+
 //Counting instances of values in an object
 let names = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice', 'Bruce']
 
