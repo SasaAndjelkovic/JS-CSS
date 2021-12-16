@@ -251,12 +251,17 @@ console.log(countNumberOfOccurrences({
   b: "scumbag"
 })) // ➞ { idiot: 1, scumbag: 1 }
 
-//dario solution
+//dario solution // laksi za citanje i razumevanje
 const countNumberOfOccurrences = obj => {
     const value = Object.values(obj); // ['moron', 'scumbag', 'moron', 'idiot', 'idiot']
+    console.log(value);
 
-    const result = value.reduce((acc, nextValue) => {
+    const result = value.reduce((acc, nextValue, index) => {
+        console.log('broj iteracije', index);
+        console.log('akumulator =', acc, 'sledeca vrednost =', nextValue);
         acc[nextValue] = acc[nextValue] ? acc[nextValue] + 1 : 1;
+        console.log(acc[nextValue]);
+        console.log(acc);
         return acc;
       }, {})
         return result
@@ -290,9 +295,11 @@ console.log(countedNames)
 //Kuzma primer
 let obj = {}
 // obj[key] = vrednost - ovde na key dodajes njegovu vrednost
+//moron koji je vrednost postaje key
 let a = 'a';
 obj[a] = 1 //  u konzoli ce pisati {a:1}
 console.log(obj);
+console.log(obj.a);  // -> 1
 
 //Grouping objects by a property
 let people = [
