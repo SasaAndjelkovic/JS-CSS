@@ -84,3 +84,26 @@ const FCC = 'freeCodeCamp';
 let fact = 'is cool!';
 fact = 'is awesome!'; //obrati paznju: fact je ipak promenjen jer je u drugoj liniji bez let
 console.log(FCC, fact); //freeCodeCamp is awesome!
+
+
+//11. Add Two Numbers with JavaScript
+const SUM = 10 + 10;
+
+
+//12. Subtract One Number from Another with JavaScript
+const DIFFERENCE = 45 - 33;
+
+
+//13. Multiply Two Numbers with JavaScript
+const PROCUCT = 8 * 10;
+
+
+//14. Divide One Number by Another with JavaScript
+const QUOTIENT = 66 / 33;
+
+
+//15. Increment a Number with JavaScript
+let myVar = 87;
+myVar++;
+
+
