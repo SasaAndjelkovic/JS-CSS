@@ -84,6 +84,7 @@ const FCC = 'freeCodeCamp';
 let fact = 'is cool!';
 fact = 'is awesome!'; //obrati paznju: fact je ipak promenjen jer je u drugoj liniji bez let
 console.log(FCC, fact); //freeCodeCamp is awesome!
+//Uobicajena praksa pri imenovanju konstanti je da se koriste sva velika slova, sa recima odvojenim donjom crtom. 
 
 
 //11. Add Two Numbers with JavaScript
@@ -105,5 +106,40 @@ const QUOTIENT = 66 / 33;
 //15. Increment a Number with JavaScript
 let myVar = 87;
 myVar++;
+
+
+//16. Decrement a Number with JavaScript
+let myVar = 11;
+myVar--;
+
+
+//17. Create Decimal Numbers with JavaScript
+const ourDecimal = 5.7
+const myDecimal = 57 / 10;
+
+
+//18. Multiply Two Decimal with JavaScript
+const product = 2.0 * 2.5;
+
+
+//19. Divide One Decimal by Another with JavaScript
+const QUOTIENT = 4.4 / 2.0;
+
+
+//20. Finding a Remainder in JavaScript
+
+/*Example
+5 % 2 = 1
+Math.floor(5 / 2) = 2 (Quotient)
+2 * 2 = 4
+5 - 4 = 1 (Remainder) 
+*/
+
+/*Usage
+17 % 2 = 1 (17 is Odd)
+48 % 2 = 0 (48 is Even)
+*/
+
+const REMAINDER = 11 % 3;
 
 
