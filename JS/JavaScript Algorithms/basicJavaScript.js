@@ -143,3 +143,47 @@ Math.floor(5 / 2) = 2 (Quotient)
 const REMAINDER = 11 % 3;
 
 
+//21. Compound Assignement With Augmented Addition
+let a = 3;
+let b = 17;
+let c = 12;
+
+//a = a =12;
+a += 12;
+b += 9;
+c += 7;
+
+
+//22. Compound Assignement With Augmented Subtraction
+let a = 11;
+let b = 9;
+let c = 3;
+
+a -= 6;
+b -= 15;
+c -= 1;
+
+
+//23. Compound Assignement With Augmented Multiplication
+let a = 5;
+let b = 12;
+let c = 4.6
+
+a *= 5;
+b *= 3;
+c *= 10;
+
+
+//24. Compound Assignement With Augmented Division
+let a = 48;
+let b = 108;
+let c = 33;
+
+a /= 12;
+b /=4;
+c /= 11;
+
+
+//25. Escaping Literal Quotes in Strings
+const myStr = 'I am a \'single quoted\' string inside \'single qouted\'.';
+
