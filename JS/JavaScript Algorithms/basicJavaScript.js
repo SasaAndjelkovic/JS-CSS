@@ -187,3 +187,33 @@ c /= 11;
 //25. Escaping Literal Quotes in Strings
 const myStr = 'I am a \'single quoted\' string inside \'single qouted\'.';
 
+
+//26. Escape Sequences in Strings
+const myStr = 'FirstLine\n\t\\SecondLine\nThirdLine';
+
+console.log (myStr);
+/* -> 
+FirstLine
+	\SecondLine
+ThirdLine
+*/
+
+
+//27. Concatenating Strings with Plus Operator
+const myStr = 'This is the start. ' + 'This is the end.';
+
+
+//28. Concatenating Strings with Plus Equals Operator
+let myStr = 'This is the first sentence. ';
+myStr += 'This is the second sentence.';
+
+
+//29. Constructing Strings with Variables
+const myName = 'TechaSasha';
+const myStr = 'My name is ' + myName + 'and I am well';
+
+
+//30. Appending Variables to Strings
+const someAdjective = 'awesome!';
+let myStr = 'Learning to code is ';
+myStr += someAdjective;
