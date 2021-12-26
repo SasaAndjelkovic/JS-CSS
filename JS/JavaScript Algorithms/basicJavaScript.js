@@ -217,3 +217,23 @@ const myStr = 'My name is ' + myName + 'and I am well';
 const someAdjective = 'awesome!';
 let myStr = 'Learning to code is ';
 myStr += someAdjective;
+
+
+//31. Find the Length of a String
+let lastNameLength = 0;
+const lastName = 'Lovelace';
+lastNameLength = lastName.length; // -> 8
+
+
+//32. Use Bracket Notation to Find the First Character in a String
+let firstLetterOfLastName = '';
+const lastName = 'Lovelace';
+firstLetterOfLastName = lastName[0]; // -> L
+
+
+//33. UnderStand String Immutability
+let myStr = 'Jello World';
+myStr[0] = 'H';
+console.log(myStr);  // -> Jello World
+myStr = 'Hello World';
+console.log(myStr); // -> Hello World
