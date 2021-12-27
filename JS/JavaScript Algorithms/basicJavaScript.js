@@ -237,3 +237,41 @@ myStr[0] = 'H';
 console.log(myStr);  // -> Jello World
 myStr = 'Hello World';
 console.log(myStr); // -> Hello World
+
+
+//34. Use Bracket Notation to Find the Nth Character in a String
+const lastName = 'Lovelace';
+const thirdLetterOfLastName = lastName[2];
+
+
+//35. Use Bracket Notation to Find the Last Character in a string
+const lastName = 'Lovelace';
+const lastLetterOfLastName = lastName[lastName.length - 1];
+
+
+//36. Use Bracket Notation to Find the Nth-to-Last Character in a String
+const lastName = 'Lovelace';
+const secondToLastLetterOfLastName = lastName[lastName.length -2];
+
+
+//37. Word Blanks
+const myNoun = 'dog';
+const myAdjective = 'big';
+const myVerb = 'run';
+const myAdverbe = 'quickly';
+
+const wordBlanks = 'The ' + myAdjective + ' ' + myNoun + ' ' + myVerb + ' ' + myAdverbe + '.';
+
+
+//38. Store Multiple Values in one Variable using JavaScript Arrays
+const myArray = ['bread', 1];
+
+
+//39. Nest one Array within Anotther Array
+const teams = [['Bulls', 23], ['White Sox', 45]];
+
+
+//40. Access Array Data with Indexes
+const array = [50, 60, 70];
+array[0];
+const data = array[1];
