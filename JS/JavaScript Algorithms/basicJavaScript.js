@@ -275,3 +275,36 @@ const teams = [['Bulls', 23], ['White Sox', 45]];
 const array = [50, 60, 70];
 array[0];
 const data = array[1];
+
+
+//41. Modify Array Data With Indexes
+const myArray = [18, 64, 99];
+myArray[0] = 45;
+
+
+//42. Access Multi-Dimensional Array With Indexes
+const arr = [
+	[1, 2, 3],
+	[4, 5, 6],
+	[7, 8, 9],
+	[[10, 11, 12], 13, 14]
+];
+
+const firstLevel = arr[3];
+const secondLevel = arr[3][0];
+const thirdLevel = arr[3][0][1];
+
+
+//43. Manipulate Arrays With push()
+const myArray = [['John', 23], ['cat', 2]];
+myArray.push(['dog', 3]); // -> [['John', 23], ['cat', 2], ['dog', 3]]
+
+
+//44. Manipulate Arrays With pop()
+const myArray = [['John, 23'], ['cat', 2]];
+const removedFromMyArray = myArray.pop(); // -> remove the last element ['cat', 2]
+
+
+//45. Manipulate Arrays With shift()
+const myArray = [['John', 23], ['cat', 2]];
+const removedFromMyArray = myArray.shift(); // -> remove the first element ['John', 23]
