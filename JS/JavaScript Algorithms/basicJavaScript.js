@@ -290,9 +290,9 @@ const arr = [
 	[[10, 11, 12], 13, 14]
 ];
 
-const firstLevel = arr[3];
-const secondLevel = arr[3][0];
-const thirdLevel = arr[3][0][1];
+const firstLevel = arr[3]; // -> [[10, 11, 12], 13, 14]
+const secondLevel = arr[3][0]; // -> [10, 11, 12]
+const thirdLevel = arr[3][0][1]; // -> 11
 
 
 //43. Manipulate Arrays With push()
@@ -308,3 +308,43 @@ const removedFromMyArray = myArray.pop(); // -> remove the last element ['cat', 
 //45. Manipulate Arrays With shift()
 const myArray = [['John', 23], ['cat', 2]];
 const removedFromMyArray = myArray.shift(); // -> remove the first element ['John', 23]
+
+
+//46. Manipulate Arrays With unshift()
+const myArray = [['John', 23], ['dog', 3]];
+myArray.shift();
+myArray.unshift(['Paul', 35]);
+
+
+//47. Shopping list
+const myList = [
+	['Chocolate Bar', 15],
+	['Prosecco Cardiola', 75],
+	['Nescafe Classic', 200],
+	['Monini extra virgin', 1],
+	['Rio Mare', 160]
+];
+
+
+//48. Write Reusable JavaScript with Functions
+function reusableFunction() {
+	console.log('Hi World');
+};
+
+reusableFunction();
+
+
+//49. Passing Values to Functions with Arguments
+function testFun(param1, param2) {
+	console.log(param1, param2);
+};
+
+testFun('Hello', 'World');
+
+function fuctionWithArgs(param1, param2) {
+	console.log(param1 + param2);
+};
+
+fuctionWithArgs(1, 2);
+
+
