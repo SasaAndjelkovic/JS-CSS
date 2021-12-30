@@ -348,3 +348,87 @@ function fuctionWithArgs(param1, param2) {
 fuctionWithArgs(1, 2);
 
 
+//50. Return a Value from a Function with Return
+function timesFive(num) {
+	return num * 5;
+};
+
+const answer1 = timesFive(5);
+const answer2 = timesFive(2);
+const answer3 = timesFive(0);
+
+
+//51. Global Scope and Functions
+let myGlobal = 10;
+
+function fun1() {
+	oopsGlobal = 5;
+};
+
+function fun2() {
+	var output = '';
+	if (typeof myGlobal != 'undefined') {
+		output += 'myGlobal: ' + myGlobal;
+	}
+	if (typeof oopsGlobal != 'undefined') {
+		output += '\noopsGlobal: ' + oopsGlobal;
+	}
+	console.log(output);
+};
+
+fun1();
+fun2();
+
+
+//52. LocalScope and Functions
+function myLocalScope() {
+	const myVar = 'boo';
+	console.log('inside myLocalScope', myVar);
+}; 
+myLocalScope(); // -> inside myLocalScope boo
+
+console.log('outside myLocalScope', myVar);  // -> ReferenceError: myVar is not defined
+
+
+//53. Global vs. Local Scope in Functions
+const outerWear = 'T-Shirt';
+
+function myOutfit() {
+	const outerWear = 'sweater';
+	return outerWear;
+}
+
+console.log(myOutfit()); // -> sweater
+
+
+//54. Understanding Undifined Value returned from a Function
+let sum = 0;
+
+function addThree() {
+	sum = sum + 3;
+};
+
+function addFive() {
+	sum = sum + 5;
+};
+
+console.log(addThree()); // -> undefined
+console.log(addFive()); // -> undefined
+
+
+//55. Assignment with a Returned Value
+let processed = 0;
+
+function processArg(num) {
+	return (num + 3) / 5;
+};
+
+processed = processArg(7);
+
+console.log(processed);
+
+
+
+
+
+
