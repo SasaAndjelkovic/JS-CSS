@@ -425,7 +425,79 @@ function processArg(num) {
 
 processed = processArg(7);
 
-console.log(processed);
+console.log(processed);  // -> 2
+
+
+//56. Stand in Line
+function nextInLine(arr, item) {
+	arr.push(item);
+	var removed = arr.shift();
+	return removed;
+};
+
+const testArr = [1, 2, 3, 4, 5];
+
+console.log('Before: ' + JSON.stringify(testArr));  // -> Before: [1,2,3,4,5]  
+console.log(nextInLine(testArr, 6));                // -> 1
+console.log('After: ' + JSON.stringify(testArr));   // -> After: [2,3,4,5,6]
+
+//JSON.stringify(value) to convert it into a string.
+//JSON.stringify(value, replacer) 
+function replacer(key, value) {
+	// Filtering out properties
+	if (typeof value === 'string') {
+	  return undefined;
+	}
+	return value;
+  }
+  
+  var foo = {foundation: 'Mozilla', model: 'box', week: 45, transport: 'car', month: 7};
+  console.log(JSON.stringify(foo, replacer));
+  // '{"week":45,"month":7}'
+
+
+//57. Understanding Boolean Values
+function welcomeToBooleans() {
+	return true;
+};
+
+
+//58. Use Conditional Logic with If Statements
+function trueOrFalse(wasThatTrue) {
+	if (wasThatTrue) {
+		console.log ('Yes, that was true');
+	} else console.log ('No, that was false');
+};
+
+trueOrFalse(true);
+trueOrFalse(false);
+
+
+//59. Comparation with the Equality Operator
+function testEqual(val) {
+	if (val == 12) {
+		console.log('Equal');
+	} else console.log('Not Equal');
+};
+
+testEqual(10);    // -> Not Equal
+testEqual(12);    // -> Equal
+testEqual('12');  // -> Equal
+
+
+//60. Comparasion with the Strict Equality Operator
+function testStrict(val) {
+	if (val === 7) {
+		console.log('Equal');
+	} else console.log('Not Equal');
+};
+
+testStrict(10);
+testStrict(7);
+testStrict('7');
+
+
+
 
 
 
