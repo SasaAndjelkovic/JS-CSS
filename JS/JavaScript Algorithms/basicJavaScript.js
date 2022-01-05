@@ -496,9 +496,70 @@ testStrict(10);
 testStrict(7);
 testStrict('7');
 
+//61. Practice comparing different values
+function compareEquality(a, b) {
+	if (a === b) {
+		console.log('Equal');
+	} else console.log('Not Equal');
+};
+
+compareEquality(10, '10');
 
 
+//62. Comparation with the Inequality Operator
+function testNonEqual(val) {
+	if (val != 12) {
+		console.log('Not Equal');
+	} else {
+		console.log('Equal');
+	};
+};
 
+testNonEqual(99);
+
+
+//63. Comparation with the Strict Inequality Operator
+function testStrictNonEqual(val) {
+	if (val !== 17) {
+		console.log('Not Equal');
+	} else {
+		console.log('Equal');
+	};
+};
+
+testStrictNonEqual(17);
+
+
+//64. Comparation with the Greater Than Operator
+function testGreaterThan(val) {
+	if (val > 100) {
+		console.log('Over 100');
+	} else if (val > 10) {
+		console.log('Over 10');
+	} else {
+		console.log('10 and Under');
+	};
+};
+
+testGreaterThan(8);
+testGreaterThan(18);
+testGreaterThan(108);
+
+
+//65. Comparation with the Greater Than Or Equal To Operator
+function testGreaterOrEqual(val) {
+	if (val >= 20) {
+		console.log('20 or Over');
+	} else if (val >= 10) {
+		console.log('10 or Over');
+	} else {
+		console.log('Less than 10');
+	};
+};
+
+testGreaterOrEqual(0);
+testGreaterOrEqual(10);
+testGreaterOrEqual(22);
 
 
 
