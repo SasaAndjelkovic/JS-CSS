@@ -562,6 +562,88 @@ testGreaterOrEqual(10);
 testGreaterOrEqual(22);
 
 
+//66. Comparation with the Less Than Operator
+function testLessThan(val) {
+	if (val < 25) console.log(val + ' is Under 25');
+		else if (val < 50) console.log(val + ' is Under 50');
+			else console.log(val + ' is 50 or Over');
+};
+
+testLessThan(24);
+testLessThan(48);
+testLessThan(56);
+
+
+//67. Comparation with the Less Than Or Equal To Operator
+const testLessOrEqual = val => {
+	val <= 12 ? console.log(val + ' is Smaller Than Or Equal to 12') :
+		val <= 24 ? console.log(val + ' is Smaller Than Or Equal to 24') : console.log(val + ' is More Than 24');
+};
+
+testLessOrEqual(10);
+testLessOrEqual(20);
+testLessOrEqual(50);
+
+
+//68. Comparation with the Logical And Operator
+function testLogicalAnd(val) {
+	if (val >= 25) {
+		if (val <=50) {
+			return 'Yes';  //suvise je komplikovano sa console.log i else
+		}; 
+	};
+	return 'No';
+};
+
+console.log(testLogicalAnd(20));
+console.log(testLogicalAnd(30));
+console.log(testLogicalAnd(60));
+
+//&& nacin
+function testLogicalAnd(val) {
+	if (val >=25 && val <=50) console.log('Yes');
+		else console.log('No'); 
+}
+
+testLogicalAnd(20);
+testLogicalAnd(30);
+testLogicalAnd(60);
+
+//ES6 nacin
+const testLogicalAnd = val => 
+	val >= 25 && val <= 50 ? console.log('Yes') : console.log('No');
+
+testLogicalAnd(20);
+testLogicalAnd(30);
+testLogicalAnd(60);
+
+
+//69. Comparation with the Logical Or Operator
+const testLogicalOr = val =>
+	val < 10 || val > 20 ? console.log('Outside') : console.log('Inside');
+
+testLogicalOr(0);
+testLogicalOr(10);
+testLogicalOr(30);
+
+
+//70. Introducing Else Statements
+function testElse(val) {
+	result = '';
+	if (val > 5) result = 'Bigger than 5';
+		else result = 'Smaller or equal than 5';
+	console.log(result);
+};
+
+testElse(4);
+testElse(8);
+
+
+
+
+
+
+
 
 
 
