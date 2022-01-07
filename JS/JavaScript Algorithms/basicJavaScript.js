@@ -639,6 +639,117 @@ testElse(4);
 testElse(8);
 
 
+//71. Introducing Else If Statements
+function testElseIf(val) {
+	if (val > 10) {
+		console.log(val + ' Greater than 10');
+	} else if (val < 5) {
+		console.log(val + ' Smaller than 5')
+	} else {
+		console.log(val + ' Between 5 and 10');
+	}
+};
+
+testElseIf(3);
+testElseIf(7);
+testElseIf(12);
+
+
+//72. Logical Order in If Else Statements
+function foo(x) {
+	if (x < 1){
+		console.log('Less than one');	
+	} else if (x < 2) {
+		console.log('Less than two');
+	} else {
+		console.log('Greater than or equal to two');
+	}
+};  // -> Less than one
+
+function bar(x) {
+	if (x < 2) {
+		console.log('Less than two');
+	} else if (x < 1) {
+		console.log('Less than one');
+	} else {
+		console.log('Greater than or equal to two');
+	}
+};  // -> Less than two
+
+foo(0);
+bar(0);
+
+
+//73. Chaining If Else Statements
+function testSize(num) {
+	if (num < 5) {
+		console.log('Tiny');
+	} else if (num < 10) {
+		console.log('Small');
+	} else if (num < 15) {
+		console.log('Medium');
+	} else if (num < 20) {
+		console.log('Large');
+	} //else if (num >=20) {
+	  else { 
+		console.log('Huge')
+	};
+}
+
+testSize(0);
+testSize(5);
+testSize(25);
+
+
+//74. Golf Code;
+const names = ['Hole-in-one!', 'Eagle', 'Birdie', 'Par', 'Bogey', 'Double Bogey', 'Go Home!'];
+
+function golfScore(par, strokes) {
+	if (strokes == 1) {
+		console.log(names[0]);
+	} else if (strokes <= par - 2) {
+		console.log(names[1]);
+ 	} else if (strokes == par - 1) {
+		console.log(names[2]);
+	} else if (strokes == par) {
+		console.log(names[3]);
+	} else if (strokes == par + 1) {
+		console.log(names[4]);
+	} else if (strokes == par + 2) {
+		console.log(names[5]);
+	} else {
+		console.log(names[6]);
+	}
+};
+
+golfScore(5, 4);
+
+
+//75. Selecting from Many Options with Switch Statements
+function caseInSwitch(val) {
+	let answer = '';
+
+	switch(val) {
+		case 1:
+			answer = 'alpha';
+			break;
+		case 2:
+			answer = 'beta';
+			break;
+		case 3:
+			answer = 'gamma';
+			break;
+		case 4:
+			answer = 'delta';
+			break;
+	}
+
+	console.log(answer);
+};
+
+caseInSwitch(3);
+
+
 
 
 
