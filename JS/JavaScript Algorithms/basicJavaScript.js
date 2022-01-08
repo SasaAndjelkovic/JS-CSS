@@ -750,7 +750,119 @@ function caseInSwitch(val) {
 caseInSwitch(3);
 
 
+//76. Adding a Default Option in Switch Statements
+function switchOfStuff(val) {
+	let answer = '';
 
+	switch(val) {
+		case 'a':
+			answer = 'apple';
+			break;
+		case 'b':
+			answer = 'bird';
+			break;
+		case 'c':
+			answer = 'cat';
+			break;
+		default:
+			answer = 'stuff';
+			break;
+	}
+
+	console.log(answer);
+}
+
+switchOfStuff(1);
+
+
+//77. Multiple Identical Options in Switch Statements
+function sequentialSizes(val) {
+	let answer = '';
+
+	switch(val) {
+		case 1:
+		case 2:
+		case 3:
+			answer = 'Low';
+			break;
+		case 4:
+		case 5:
+		case 6:
+			answer = 'Mid';
+			break;
+		case 7:
+		case 8:
+		case 9:
+			answer = 'High';
+	}
+
+	console.log(answer);
+}
+
+sequentialSizes(1);
+
+
+//78. Replacing If Else Chains with Switch
+let answer = '';
+
+if (val === 1) {
+	answer = 'a';
+} else if (val === 2) {
+	answer = 'b';
+} else {
+	answer = 'c';
+}
+
+
+switch(val) {
+	case 1:
+		answer = 'a';
+		break;
+	case 2:
+		answer = 'b';
+		break;
+	default:	
+		answer = 'c';
+}
+
+
+//79. Returing Boolean Values from Functions
+function isEqualA(a, b) {
+	if (a === b) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+
+function isEqualB(a, b) {
+	return a === b;
+}
+
+console.log(isEqualA(2, 3));
+console.log(isEqualA(3, 3));
+console.log(isEqualB(2, 3));
+console.log(isEqualB(3, 3));
+
+
+//80. Return Early Pattern for Functions
+function myFun() {
+	console.log('Hello');
+	return 'World';
+	console.log('byebye')
+}
+
+console.log(myFun());
+
+function abTest(a, b) {
+	if (a < 0 || b < 0) {
+		return undefined;
+	};
+	return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
+}
+
+console.log(abTest(2, 2));
 
 
 
