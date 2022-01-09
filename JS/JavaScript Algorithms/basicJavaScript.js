@@ -865,6 +865,118 @@ function abTest(a, b) {
 console.log(abTest(2, 2));
 
 
+//81. Counting Cards
+let count = 0;
+
+function cc(card) {
+	switch (card) {
+		case 2:
+		case 3:
+		case 4:
+		case 5:
+		case 6:
+			count += 1;
+			break;
+		case 10:
+		case 'J':
+		case 'Q':
+		case 'K':
+		case 'A':
+			count--;
+			break;
+	};
+
+	if (count <= 0) {
+		console.log(count + 'Hold');
+	} else {
+		console.log(count + 'Bet');
+	};
+};
+
+cc(2); cc(3); cc(7); cc('K'); cc('A');
+cc(2); cc(3); cc(4); cc(5); cc(6);
+
+
+let count = 0;
+
+const cc = card => {
+	
+	let regex = /[JQKA]/;
+	if (card > 1 && card < 7) {
+		count++;
+	} else if (card === 10 || regex.test(card)) {
+		count--;
+	}
+
+	if (count > 0) console.log(count + 'Bet');
+		else console.log(count + 'Hold');
+}
+
+cc(2); cc(3); cc(7); cc('K'); cc('A');
+
+
+//82. Build JavaScript Objects
+const myDog = {
+	name: 'Whiskers',
+	legs: 4, 
+	tails: 1,
+	friends: ['boys', 'girls']
+};
+
+
+//83. Accessing Object Properties with Dot Notation
+const testObj = {
+	'hat': 'ballcap',
+	'shirt': 'jersey',
+	'shoes': 'cleats'
+};
+
+const hatValue = testObj.hat;
+const shirtValue = testObj.shirt;
+
+
+//84. Accessing Object Propreties with Bracket Notation
+//kada je ime iz dve reci
+const testObj = {
+	'an entree': 'hamburger',
+	'my side': 'veggies',
+	'the drink': 'water'
+};
+
+const entreeValue = testObj['an entree'];
+const drinkValue = testObj['the drink'];
+
+
+//85. Accessing Object Properties with Variables
+//kao vrednost promenljive
+const testObj = {
+	12: 'Namath',
+	16: 'Montana',
+	19: 'Unitas'
+};
+
+const playerNumber = 16;
+const player = testObj[playerNumber];
+
+console.log(player);
+
+
+const someObj = {
+	propName: 'John'
+};
+
+function propPrefix(str) {
+	const s = 'prop';
+	return s + str;
+}
+
+const someProp = propPrefix('Name');
+console.log(someObj[someProp]);
+
+
+
+
+
 
 
 
