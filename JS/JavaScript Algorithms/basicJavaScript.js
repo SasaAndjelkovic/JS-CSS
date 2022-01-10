@@ -936,7 +936,7 @@ const shirtValue = testObj.shirt;
 
 
 //84. Accessing Object Propreties with Bracket Notation
-//kada je ime iz dve reci
+//kada je ime property (name:value pair) iz dve reci
 const testObj = {
 	'an entree': 'hamburger',
 	'my side': 'veggies',
@@ -972,6 +972,104 @@ function propPrefix(str) {
 
 const someProp = propPrefix('Name');
 console.log(someObj[someProp]);
+
+
+//86. Updating Object Properties
+const myDog = {
+	'name': 'Coder', 
+	'legs': 4,
+	'tails': 1,
+	'friends': ['freeCodeCamp Campers']
+};
+
+myDog.name = 'Happy Coder';
+
+
+//87. Add New Properties to a JavaScript Object
+const myDog = {
+	'name': 'Coder',
+	'legs': 4,
+	'tails': 1,
+	'friends': ['freeCodeCamp Campers']
+};
+
+myDog.bark = 'woof';
+
+
+//88. Delete Propreties from a JavaScript Object
+const myDog = {
+	'name': 'Coder',
+	'legs': 4,
+	'tails': 1,
+	'friends': ['freeCodeCamp Campers'],
+	'bark': 'woof'
+}
+
+delete myDog.tails;
+
+
+//89. Using Objects for Lookups
+function phoneticLookup(val) {
+	let result = '';
+
+	switch(val) {
+		case 'alpha': 
+			result = 'Adams';
+			break;
+		case 'bravo':
+			result = 'Boston';
+			break;
+		case 'charlie':
+			result = 'Chicago';
+			break;
+		case 'delta':
+			result = 'Denver';
+			break;
+		case 'echo':
+			result = 'Easy';
+			break;
+		case 'foxtrot':
+			result = 'Frank';
+	}
+
+	return result;
+}
+
+phoneticLookup('charlie');
+
+function phoneticLookup(val) {
+	let result = '';
+
+	const lookup = {
+		'alpha':'Adams',
+		'bravo':'Boston',
+		'charlie':'Chicago',
+		'delta':'Denver',
+		'echo':'Easy',
+		'foxtrot':'Frank'
+	};
+
+	result = lookup[value];
+    
+	return result;
+};
+
+phoneticLookup('charlie');
+
+
+//90. Testing Objects for Properties
+const checkObj = (obj, checkProp) => {
+	let result = obj.hasOwnProperty(checkProp) ? obj[checkProp] : 'Not Found';  //ne moze obj.checkProp
+	return result;
+};
+
+console.log(
+	checkObj({
+		gift:'pony',
+		pet:'kitten',
+		bed:'sleigh'
+	}, 
+		'gift'));
 
 
 
