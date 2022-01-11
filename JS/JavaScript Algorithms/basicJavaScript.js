@@ -1072,6 +1072,145 @@ console.log(
 		'gift'));
 
 
+//91. Manipulating Complex Objects - Object Notatiton or JSON is a related data interchange format used to store data
+const myMusic = [
+	{
+		'artist': 'Billy Joel',
+		'title': 'Piano Man',
+		'release_year': 1973,
+		'formats': [
+			'CD',
+			'8T',
+			'LP'
+		],
+		'gold': true
+	},
+	{
+		'artist': 'Ekatarina Velika',
+		'title': 'Dum Dum',
+		'realease_year': 1993,
+		'formats': [
+			'CD',
+			'8T',
+			'LP'
+		],
+		'gold': false
+	}
+];
+
+
+//92. Accessing Nested Objects
+const myStorage = {
+	'car': {
+		'inside': {
+			'glove box': 'maps',
+			'passenger seat': 'crumbs'
+		},
+		'outside': {
+			'trunk': 'jack'
+		}
+	}
+};
+
+const gloveBoxContents = myStorage.car.inside['glove box'];
+myStorage.car.inside['passenger seat'];
+myStorage.car.outside.trunk;
+
+
+//93. Accessing Nested Arrays
+const myPlants = [
+	{
+		type: 'flowers',
+		list: [
+			'rose',
+			'tulip',
+			'dandelion'
+		]
+	},
+	{
+		type: 'trees',
+		list: [
+			'fir',
+			'pine',
+			'birch'
+		]
+	}
+];
+
+const secondTree = myPlants[1].list[1];
+
+
+//94. Record Collection
+const recordCollection = {
+	2548: {
+		albumTitle: 'Slippery When Wet',
+		artist: 'Bon Jovi',
+		tracks: ['Let It Rock', 'You Give Lova a Bad Name']
+	},
+	2468: {
+		albumTitle: '1999',
+		artist: 'Prince',
+		tracks: ['1999', 'Little Red Corvette']
+	},
+	1245: {
+		artist: 'Robert Palmer',
+		tracks: []
+	},
+	5439: {
+		albumTitle: 'ABBA Gold',
+	}
+};
+
+function updateRecords(records, id, prop, value) {
+	if (prop !== 'tracks' && value !=='') {
+		records[id][prop] = value;  //(updateRecords(recordCollection, 5439, 'artist', 'ABBA') dodao je artist: 'ABBA';
+	} else if (prop === 'tracks' && records[id].hasOwnProperty('tracks') === false) {
+		records[id][prop] = [value]; //updateRecords(recordCollection, 5439, 'tracks', 'Take a Chance on Me') 
+									 //dodao je tracks: [ 'Take a Chance on Me' ]
+	} else if (prop === 'tracks' && value !=='') {
+		records[id][prop].push(value); //updateRecords(recordCollection, 2468, 'tracks', 'Free'), dodao je 'tracks' 'Free' kao ne prvi element
+	} else if (value === '') {
+		delete records[id][prop];  //updateRecords(recordCollection, 2548, 'artist', '') obrisao je 'artist':'Bon Jovi'
+	}
+	return records;
+}
+
+//console.log(updateRecords(recordCollection, 5439, 'artist', 'ABBA')); 
+//console.log(updateRecords(recordCollection, 5439, 'tracks', 'Take a Chance on Me')); 
+//console.log(updateRecords(recordCollection, 2548, 'artist', ''))
+console.log(updateRecords(recordCollection, 2468, 'tracks', 'Free'));
+
+function updateRecords(records, id, prop, value) {
+	if (value === '') {
+		delete records[id][prop];
+	} else if (prop === 'tracks') {
+		records[id][prop] = records[id][prop] || [];  //shortcircuit evaluation 
+													  //https://medium.com/@amaliesmidth/javascript-short-circuit-conditionals-6606bdeaa30d
+		records[id][prop].push(value);
+	} else {
+		records[id][prop] = value;
+	}
+	return records;
+}
+
+
+//95. Iterate with JavaScript While Loops
+const myArray = [];
+let i = 5;
+
+while (i >= 0) {
+	myArray.push(i);
+	i--;
+};
+
+console.log(myArray);  // -> [ 5, 4, 3, 2, 1, 0 ];
+
+
+
+
+
+
+
 
 
 
