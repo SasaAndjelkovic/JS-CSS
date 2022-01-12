@@ -1206,9 +1206,53 @@ while (i >= 0) {
 console.log(myArray);  // -> [ 5, 4, 3, 2, 1, 0 ];
 
 
+//96. Iterate with JavaScript For Loops
+const myArray = [];
+
+for (let i = 1; i <= 5; i++) {
+	myArray.push(i);
+}
 
 
+//97. Iterate Odd Numbers With a For Loop
+const myArray = [];
 
+for (let i = 1; i <=9; i += 2) {
+	myArray.push(i);
+};
+
+
+//98. Count Backwards With a For Loop
+const myArray = [];
+
+for (let i = 9; i >= 1; i -= 2 ) {
+	myArray.push(i);
+};
+
+
+//99. Iterate Through an Array with a For Loop
+const myArray = [2, 3, 4, 5, 6];
+
+let total = 0; //ne const, tada bi bilo read only
+
+for (let i = 0; i < myArray.length; i++) {
+	total += myArray[i];
+};
+
+
+//100. Nesting For Loops
+function multuplyAll(arr) {
+	let product = 1;
+
+	for (let i = 0; i < arr.length; i++) {
+		for (let j = 0; j < arr[i].length; j++){
+			product *= arr[i][j];
+		}
+	}
+	return product;
+};
+
+console.log(multuplyAll([[1, 2], [3, 4], [5, 6, 7]]));
 
 
 
