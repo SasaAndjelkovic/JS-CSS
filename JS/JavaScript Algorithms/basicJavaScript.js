@@ -1255,6 +1255,93 @@ function multuplyAll(arr) {
 console.log(multuplyAll([[1, 2], [3, 4], [5, 6, 7]]));
 
 
+//101. Iterate with JavaScript Do ... While Loops
+const whileArray = [];
+let i = 10;
+
+while (i < 10) {
+	whileArray.push(i);
+	i++;
+} 
+
+
+const doWhileArray = [];
+let i = 10;
+
+do {
+	doWhileArray.push(i);
+	i++;
+} while (i < 10);
+
+
+//102. Replace Loops using Recursion  
+function loopsMultiply(arr, n) {
+	let product = 1;
+	for (let i = 0; i < n; i++) {
+		product *= arr[i];
+	}
+	return product;
+}
+
+function recursionMultiply(arr, n) {   //nije za for ni za while, niti za cikluse viseg reda: forEach, map, filter, reduce
+	if (n <= 0) {
+		return(1);
+	} else {
+		return(recursionMultiply(arr, n - 1) * arr[n - 1]);  
+	}
+}
+
+console.log(recursionMultiply([2, 3, 4], 3));
+
+
+//103. Profile Lookup
+const contacts = [
+	{
+		firstName: 'Akira',
+		lastName: 'Laine',
+		number: '0543236543',
+		likes: ['Pizza', 'Coding', 'Brownie Points'],
+	},
+	{
+		firstName: 'Harry',
+		lastName: 'Potter',
+		number: '0994372684',
+		likes: ['Hogwarts', 'Magic', 'Hagrid'],
+	},
+	{
+		firstName: 'Sherlock',
+		lastName: 'Holmes',
+		number: '0487345643',
+		likes: ['Intriguing Cases', 'Violin'],
+	},
+	{
+		firstName: 'Kristian',
+		lastName: 'Vos',
+		number: 'unknown', 
+		likes: ['JavaScript', 'Gaming', 'Foxes'], 
+	},
+];
+
+function lookUpProfile(name, prop) {
+	for (let i = 0; i < contacts.length; i++) {
+		if (name === contacts[i].firstName) {
+			if (contacts[i].hasOwnProperty(prop)) {
+				return contacts[i][prop]
+			} else {
+				return 'No such proprety';
+			} 
+		} else {
+			return 'No such contact';
+		}
+	}
+}
+
+console.log(lookUpProfile('Akira', 'likes'));
+console.log(lookUpProfile('Kristian', 'lastName'));
+
+
+
+
 
 
 
