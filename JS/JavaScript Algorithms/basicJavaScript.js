@@ -1330,14 +1330,79 @@ function lookUpProfile(name, prop) {
 			} else {
 				return 'No such proprety';
 			} 
-		} else {
-			return 'No such contact';
-		}
+		} 
 	}
-}
+	return 'No such contact';   // ne treba else (ne bi ni bilo tu) zato sto se ranijim returnima fja zavrsava jos ranije
+};
 
 console.log(lookUpProfile('Akira', 'likes'));
 console.log(lookUpProfile('Kristian', 'lastName'));
+console.log(lookUpProfile('Bob', 'number'));
+console.log(lookUpProfile('Bob', 'potato'));
+console.log(lookUpProfile('Akira', 'address'));
+
+
+//104. Generate Random Fractions whit JavaScript
+const randomFraction = () =>	
+	Math.random();
+
+console.log(randomFraction());  //decimal numbers
+
+
+//105. Generate Random Whole Numnbers with JavaScript
+const randomWholeNumBetween1and10 = () =>
+	Math.floor(Math.random() * 10) + 1;
+
+let arr = [];	
+for (let i = 0; i < 4; i++) { 
+	let num = Math.floor(Math.random() * 3) + 1;
+	console.log('number' + num);
+ 		for (let j = 1; i < 4; j++) {
+			console.log(j);
+			if (j = num) {
+				arr[j] = + 1;
+				console.log(j, arr[j]);
+			};
+			console.log('sta sad');	
+		};
+};
+
+console.log(arr);
+
+
+let arr = [];
+for (let i = 0; i < 3; i++) {
+	arr[i] = i + 5;
+ }
+
+console.log(arr);
+
+
+//106. Generate Random Whole Numbers within a Range
+function randomRange(myMin, myMax) {
+	return Math.floor(Math.random() * (myMax - myMin + 1) + myMin);
+}
+
+
+//107. Use the parseInt Function 
+function convertToInteger(str) {
+	return parseInt(str);
+};
+
+convertToInteger('56');
+convertToInteger('n56'); // -> NaN
+
+
+//108. Use the parseInt Function with a Radix
+function convertToInteger(string, radix) {
+	return parseInt(string, radix);
+}
+
+console.log(parseInt('10011', 2));  // -> 19
+console.log(parseInt('10011', 8)); // -> 4105
+console.log(parseInt('10011', 3)); // -> 85
+
+
 
 
 
