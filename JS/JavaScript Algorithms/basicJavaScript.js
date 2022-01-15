@@ -1403,15 +1403,82 @@ console.log(parseInt('10011', 8)); // -> 4105
 console.log(parseInt('10011', 3)); // -> 85
 
 
+//109. Use the Conditional (Ternary) Operator
+const checkEqual = (a, b) => 
+	a == b ? 'Equal' : 'Not Equal';
 
 
+//110. Use Multiple Condititional (Ternary) Operators
+const checkSign = num => {
+	return (num == 0) ? 'zero'
+	: (num > 0) ? 'positive'
+	: 'negative';
+}
+
+console.log(checkSign(10));
 
 
+//111. Use Recursion to Create a Countdown
+function countup(n) {
+	console.log(n);
+	if (n < 1) {
+		return [];
+	} else {
+		const countArray = countup(n - 1);
+		console.log(countArray);
+		countArray.push(n);
+		return countArray;
+	}
+}
+
+console.log(countup(5));
+
+/*
+5
+4
+3
+2
+1
+0
+[]
+[ 1 ]
+[ 1, 2 ]
+[ 1, 2, 3 ]
+[ 1, 2, 3, 4 ]
+[ 1, 2, 3, 4, 5 ]*/
 
 
+const countdown = n => {
+	if (n < 1) {
+		return [];
+	} else {
+	const arr = countdown(n -1);
+	arr.unshift(n);
+	return arr;
+	};
+};
+
+console.log(countdown(-1));
+console.log(countdown(10));
 
 
+const countdown = n => 
+	(n < 1) ? [] : [n].concat(countdown(n - 1));
+
+console.log(countdown(-1));
+console.log(countdown(10));
 
 
+//112. Use Recursion to Create a Range of Numbers
+function rangeOfNumbers(startNum, endNum) {
+	if (endNum < startNum) {
+		return [];
+	} else {
+		const array = rangeOfNumbers(startNum, endNum - 1);
+		array.push(endNum);
+		return array;
+	};
+};
 
-
+console.log(rangeOfNumbers(1, 5));
+console.log(rangeOfNumbers(4, 4));
