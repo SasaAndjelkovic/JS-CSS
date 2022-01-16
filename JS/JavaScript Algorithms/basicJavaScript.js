@@ -1482,3 +1482,19 @@ function rangeOfNumbers(startNum, endNum) {
 
 console.log(rangeOfNumbers(1, 5));
 console.log(rangeOfNumbers(4, 4));
+
+
+const factorial = n => 
+	(n < 1) ? 1 : n * factorial(n - 1);
+//  base case : recursive call to itself
+
+console.log(factorial(4));
+
+/*
+factorial(4)
+	4 * factorial(3)
+		3 * factorial(2)
+			2 * factorial(1)
+				1
+
+
