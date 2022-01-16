@@ -1496,5 +1496,4 @@ factorial(4)
 		3 * factorial(2)
 			2 * factorial(1)
 				1
-
-
+*/
