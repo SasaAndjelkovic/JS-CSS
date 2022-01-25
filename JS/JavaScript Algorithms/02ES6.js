@@ -139,3 +139,89 @@ console.log(multiplier(4, 2));
 
 
 //6. Set Default Parameters for Your Functions
+const greeting = (name = 'Anonymous') => 'Hello ' + name;
+
+console.log(greeting('John'));
+console.log(greeting());
+
+
+const increment = (number, value = 1) => number + value;
+
+console.log(increment(5, 2));
+console.log(increment(5));
+
+
+//7. Use the Rest Parameter with Function Parameters
+const howMany = (...args) => "You have passed " + args.length + ' arguments.';
+
+console.log(howMany(0, 1, 2));
+console.log(howMany('string', null, [1, 2, 3], { }));
+
+
+const sum = (...args) => args.reduce((a, b) => a + b, 0);
+console.log(sum(1, 2, 3, 4));
+console.log(sum(5));
+console.log(sum());
+
+
+//8. Use the Spread Operator to Evaluate Arrays In-Place
+//ES5
+var arr = [6, 89, 3, 45];
+var maximus = Math.max.apply(null, arr); //Math.max(arr) -> NaN
+
+console.log(maximus);
+
+
+//ES6
+const arr = [6, 89, 3, 45];
+const maximus = Math.max(...arr); //const spreaded = ...arr; -> will not work
+
+console.log(maximus);
+
+
+const arr1 = ['JAN', 'FEB', 'MAR', 'APR', 'MAY'];
+let arr2;
+arr2 = [...arr1];
+//arr2 = arr1; daje isti rezultat. ne vidim smisao. mozda arr2 treba da ostane nepromenjen kada se promeni arr1
+
+console.log(arr2);
+
+
+//9. Use Destructuiring Assignment to Extract Values from Objects
+//ES5
+const user = { name: 'John Doe', age: 34};
+
+const name = user.name;
+const age = user.age;
+
+//ES6
+const user = { name: 'John Doe', age: 34};
+const { name, age } = user;
+console.log(name);
+
+
+const HIGH_TEMPERATURES = {
+    yesterday: 75,
+    today: 77,
+    tomorrow: 80
+};
+
+const { today, tomorrow} = HIGH_TEMPERATURES;
+
+console.log(today);
+
+
+//10. Use Destructuring Assignement to Assign Variables from Objects
+const user = { name: 'John Doe', age: 34};
+
+const { name: userName, age: userAge } = user;
+console.log(userName, userAge);
+
+
+const HIGH_TEMPERATURES = {
+    yesterday: 75,
+    today: 77,
+    tomorrow: 80
+}
+
+const { today: highToday, tomorrow: highTomorrow } = HIGH_TEMPERATURES;
