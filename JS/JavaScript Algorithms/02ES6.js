@@ -136,3 +136,6 @@ const multiplier = (item, multi) => item * multi;
 
 console.log(doubler(4));
 console.log(multiplier(4, 2));
+
+
+//6. Set Default Parameters for Your Functions
