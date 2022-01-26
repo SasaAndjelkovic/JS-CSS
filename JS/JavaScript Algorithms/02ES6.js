@@ -225,3 +225,99 @@ const HIGH_TEMPERATURES = {
 }
 
 const { today: highToday, tomorrow: highTomorrow } = HIGH_TEMPERATURES;
+
+
+//11. Use Destructuring Assignment to Assign Variables from Nested Objects
+const user = {
+    johnDOe: {
+        age: 34,
+        email: 'johnDoe@freeCodeCamp.com'
+    }
+};
+
+//how to extract...
+const { johnDOe: { age, email }} = user;
+
+//how to assigne...
+const { johnDOe: { age: userAge, email: userEmail }} = user;
+
+
+const LOCAL_FORECAST = {
+    yesterday: { low: 61, high: 75},
+    today: { low: 64, high: 77},
+    tomorrow: { low: 68, high: 80}
+};
+
+const { today: { low: lowToday, high: highToday }} = LOCAL_FORECAST;
+
+console.log(lowToday);
+
+
+//12. Use Destructuring Assignment to Assign Variables from Arrays
+//Destruktiranjem mozete da birate koje elemente zelite da dodelite promenljiv. Spread ne moze jer je raspakuje u listu razdvojenu zarezima
+const [a, b] = [1, 2, 3, 4, 5, 6];
+console.log(a, b);  // -> 1, 2
+
+const [a, b,,, c] = [1, 2, 3, 4, 5, 6];
+console.log(a, b, c); // -> 1, 2, 5
+
+
+let a = 8, b = 6;
+[a, b] = [6, 8];
+console.log(a, b);
+
+
+//13. Use Destructuring Assignment with the Rest Parameter to Reassign Array Elements
+const [a, b, ...arr] = [1, 2, 3, 4, 5, 7];
+console.log(a, b); // -> 1, 2
+console.log(arr);  // -> [3, 4, 5, 7]
+
+
+const source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const removeFirstTwo = list => {
+    const [a, b, ...arr] = list;  // a moze i bez a i b, samo dva zareza
+    return arr;
+}
+
+const arr = removeFirstTwo(source);
+console.log(arr);
+
+
+//14. Use Destructuring Assignment to Pass an Object as a Function's Parameters
+const profileUpdate = profileData => { 
+    const { name, age, nationality, location} = profileData;
+
+}
+
+//ili
+const profileUpdate = ({ name, age, nationality, location }) => {
+
+}
+
+
+const stats = {
+    max: 56.78, 
+    standard_deviation: 4.34,
+    median: 34.54,
+    mode: 23.87,
+    min: -0.75,
+    average: 35.85
+};
+
+const half = ({ max, min}) => (max + min) / 2.0;
+console.log(half(stats));
+
+
+//15. Create Strings using Template Literals
+const person = {
+    name: "Zodiac Hasbro",
+    age: 56
+};
+
+const greeting = `Hello, my name is ${person.name}! 
+I am ${person.age} years old.`;
+
+console.log(greeting);
+
+
