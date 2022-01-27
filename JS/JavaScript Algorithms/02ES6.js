@@ -321,3 +321,129 @@ I am ${person.age} years old.`;
 console.log(greeting);
 
 
+const result = {
+    success: ['max-length', 'no-amd', 'prefer-arrow-functions'],
+    failure: ['no-var', 'var-on-top', 'linebreak'],
+    skipped: ['no-extra-semi', 'no-dup-keys']
+}
+
+const makeList = arr => {
+    /*const failureItems = [];
+
+    for (let i = 0; i < arr.length; i++) {
+        failureItems.push(`li class='text-warning'>${arr[i]}</li>`);
+    }*/
+
+    const failureItems = arr.map(item => `li class='text-warning'>${item}</li>`);
+
+    return failureItems;
+}
+
+const failureList = makeList(result.failure);
+
+console.log(failureList);
+
+
+//16. Write Concise Object Literal Declarations Using Object Property Shortland
+const getMousePosition = (x, y) => ({
+    x: x,
+    y: y
+});
+
+//ES6
+const getMousePosition = (x, y) => ({ x, y });
+
+
+const createPerson = (name, age, gender) => {
+    return ({ name, age, gender });
+}
+
+console.log(createPerson('Sasa', 49, 'muskarac'));
+
+
+//17. Write Concise Declarative Functions with ES6
+const person = {
+    name: 'Taylor',
+    sayHello() {
+        return `Hello! My name is ${this.name}.`;
+    }
+};
+
+console.log(person.sayHello());
+
+
+const bicycle = {
+    gear: 2,
+    setGear(newGear) {
+        this.gear = newGear;
+    }
+};
+
+bicycle.setGear(3);
+console.log(bicycle.gear);
+
+
+//18. Use class Syntax to Define a Constructor Function
+//ES5
+var SpaceShuttle = function(targetPlanet){
+    this.targetPlanet = targetPlanet;
+}
+var zeus = new SpaceShuttle('Jupiter');
+
+//ES6
+class SpaceShuttle {
+    constructor(targetPlanet) {
+        this.targetPlanet = targetPlanet;
+    }
+}
+const zeus = new SpaceShuttle('Jupiter');
+
+
+class Vegetable {
+    constructor(name) {
+        this.name = name;
+    }
+}
+const carrot = new Vegetable("carrot");
+console.log(carrot.name);
+
+
+//19. Use getters and setters to Control Access to an Object
+class Book {
+    constructor(author) {
+        this._author = author;
+    }
+    //getter
+    get writer() {
+        return this._author;
+    }
+    //setter
+    set writer(updatedAuthor) {
+        this._author = updatedAuthor;
+    }
+}
+const novel = new Book('anonymous');
+console.log(novel.writer);
+novel.writer = 'newAuthor';
+console.log(novel.writer);
+
+
+class Thermostat {
+    constructor(fahrenheit) {
+        this._fahrenheit = fahrenheit;
+    }
+    get temperature() {
+        return 5/9 * (this._fahrenheit - 32)
+    }
+    set temperature(celsius) {
+        this._fahrenheit = celsius * 9.0 / 5 + 32
+    }
+}
+
+const thermos = new Thermostat(76);
+let tempt = thermos.temperature;
+console.log(thermos.temperature);
+
+thermos.temperature = 26;
+tempt = thermos.temperature;
+console.log(thermos.temperature);
