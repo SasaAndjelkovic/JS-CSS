@@ -447,3 +447,65 @@ console.log(thermos.temperature);
 thermos.temperature = 26;
 tempt = thermos.temperature;
 console.log(thermos.temperature);
+
+
+//20. Create a JavaScript Promise
+//Promise ima tri stanja: Pending (na cekanju), Resolve (ispunjeno), Reject (odbijeno). U ovom primeru je zauvek zaglavljeno u stanju cekanja
+const myPromise = new Promise((resolve, reject) => {
+
+});
+
+
+const makeServerRequest = new Promise ((resolve, reject) => {
+
+});
+
+
+//21. Complete a Promise with resolve and reject
+const myPromise = new Promise ((resolve, reject) => {
+    if(condition_here) {
+        resolve('Promise was fulfilled');
+    } else {
+        reject('Promise was rejected');
+    }
+});
+
+
+const makeServerRequest = new Promise ((resolve, reject) => {
+    let responseFromServer;
+    if (responseFromServer) {
+        resolve('We got the data')
+    } else {
+        reject('Data not received')
+    }
+});
+
+
+//22. Handle a FulFilled Promise with then
+const makeServerRequest = new Promise ((resolve, reject) => {
+    let responseFromServer = true;
+    if (responseFromServer) {
+        resolve('We got the data');
+    } else {
+        reject("Data not received");
+    }
+});
+
+makeServerRequest.then(result => {
+    console.log(result);
+});
+
+
+//23. Handle a Rejected Promise with catch
+const makeServerRequest = new Promise ((resolve, reject) => {
+    let responseFromServer = false;
+    if (responseFromServer) {
+        resolve("We got the data");
+    } else {
+        reject('Data not received');
+    }
+});
+
+makeServerRequest.catch(error => {
+    console.log(error);
+});
