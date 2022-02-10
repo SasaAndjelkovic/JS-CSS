@@ -57,6 +57,13 @@ let codingRegex = /coding/;
 let result = extractStr.match(codingRegex);
 
 
+//6. Find More Than the First Match
+let testStr = 'Repeat, repeat, repeat';
+let ourRegex = /Repeat/;
+console.log(testStr.match(ourRegex));
+
+
+
 
 
 
