@@ -189,9 +189,55 @@ let result = chewieQuote.match(chewieRegex);
 
 
 
+//14. Find Characters with Lazy Matching
+let str = "titanic";
+let strRegex = /t[a-z]*i/;  // start with t, ands with i
+console.log(str.match(strRegex));    // -> ["titani"]
 
 
 
+//15. Match Beginning String Patterns (^caret character)
+let firstString = "Ricky is first and can be found."
+let firstRegex = /^Ricky/;
+firstRegex.test(firstString); // -> true
+let notFirst = "You can't find Ricky now."
+firstRegex.test(notFirst); // -> false
 
 
 
+//16. Match Ending String Patterns
+let theEnding = "This is a never ending story";
+let storyRegex = /story$/;
+storyRegex.test(theEnding); // -> true
+let noEnding = "Sometimes a story will have to end";
+storyRegex.test(noEnding);  // -> false
+
+
+
+//17. Match All Letters and Numbers
+let longHand = /[A-Za-z0-9_]/;
+let shortHand = /\w+/;
+let numbers = "42";
+let varNames = "important_var";
+console.log(numbers.match(longHand));    // -> ['4']
+console.log(numbers.match(shortHand));   // -> ['42']
+console.log(varNames.match(longHand));   // -> ['i']
+console.log(varNames.match(varNames));   // -> ['important_var']
+
+
+
+//18. Match Everything But Letters and Numbers
+let longHand = /[^A-Za-z0-9]/;
+let shortHand = /\W/;
+let numbers = "42%";
+let sentence = "Coding!";
+numbers.match(shortHand);   // -> ["%"]
+sentence.match(shortHand);  // -> ["!"]
+
+
+
+//19. Match All Numbers
+let movieName = "2001: A Space Odyssey";
+let numRegex = /\d/g      // d for digit
+let result = movieName.match(numRegex).length
+console.log(result);   // -> 4
