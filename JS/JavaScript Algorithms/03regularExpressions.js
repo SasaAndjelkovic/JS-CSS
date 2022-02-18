@@ -241,3 +241,66 @@ let movieName = "2001: A Space Odyssey";
 let numRegex = /\d/g      // d for digit
 let result = movieName.match(numRegex).length
 console.log(result);   // -> 4
+
+
+
+//20. Match All Non-Numbers
+let movieName = "2001: A Space Odyssey";
+let noNumRegex = /\D/g
+//  noNumRegex = /^0-9/g
+let result = movieName.match(noNumRegex);
+
+
+
+//21. Restrict Possible Usernames
+const username = (param) => {
+  let userCheck = /^[a-z][a-z]+\d*$|^[a-z]\d\d+$/i;
+  //  userCHeck = /^[a-z]([0+9]{2,}|[a-z]+\d*)$/i;
+  let result = userCheck.test(param);
+  console.log(result);
+}
+
+/*
+1. ^ - start of input
+2. [a-z] - prvi karakter je slovo
+3. [a-z]+ -sledeci karakteri su slova
+4. \d*$ -input se zavrsava sa 0 ili vise cifara
+5. | -ili
+6. ^[a-z] - prvi karakter je slovo
+7. \d\d+ - sledeci karakteri su 2 ili vise cifara
+8. $ - kraj inputa
+
+3. [0-9]{2,0} -kraj sa dva ili vise brojeva
+*/
+
+username("JackOfAllTrades");
+username("J%3");
+username("Jo");
+username("Ocean11");
+username("c57bT3");
+
+
+
+//22. Match Whitespace     
+let whiteSpace = "Whitespace, Whitespace everywhere!";
+let spaceRegex = /\s/g;      //[ \r\t\f\n\v] return, tab, form feed, new line     \S - match Non-Whitespace Characters
+whiteSpace.match(spaceRegex);
+
+
+
+//23. Specify Upper and Lower Number of Matches
+let A4 = "aaaah";
+let A2 = "aah";
+let multipleA = /a{3,5}h/;
+multipleA.test(A4);            // -> true
+multipleA.test(A2);            // -> false
+
+
+const ohStr = (param) => {
+  let ohRegex = /Oh{3,6}\sno/;
+  let result = ohRegex.test(param);
+  console.log(result);
+}
+
+ohStr("Ohhh no");
+ohStr("Ohh no")
